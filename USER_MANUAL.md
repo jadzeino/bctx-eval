@@ -206,6 +206,12 @@ bctx patterns
 run (a passing lint/type-check/test) is nearly silent — there's nothing to compress, so you'll
 see no `[bctx: …]` line and nothing in `bctx gain`. That's expected, not a failure.
 
+> **Setup for the two demos below (4A½ eslint, 4A¾ vitest):** they run excalidraw's own tools,
+> so they need Node.js and the repo's dependencies. If you don't already have them: install Node
+> from [nodejs.org](https://nodejs.org), then, inside `~/Desktop/excalidraw`, run
+> `npm install -g yarn` and `yarn install` (takes a few minutes). Prefer to skip the setup?
+> Jump to **4B** — the source-file savings (the biggest win) need nothing extra.
+
 ### 4A½ — A non-git tool: compressing a big lint report (eslint)
 
 excalidraw is clean, so its normal lint passes quietly. To see what bctx does with a *real*
@@ -242,10 +248,32 @@ its eslint version in `yarn.lock`; it may differ slightly if you use a different
 ~100% holds regardless — lint reports are extremely repetitive.) This is the TypeScript twin of
 the Python manual's `ruff` demo.
 
-> On a *clean* repo, the reliable everyday savings come from **git** (4A) and the **source-file
-> reads** (4B/4C). Other tools (`vitest`, `tsc`, `pip`/`yarn install`, …) compress in proportion
-> to how noisy their output is — a failing test suite or a big install shows real savings; a
-> green run shows little.
+### 4A¾ — A real everyday command: the test suite (vitest)
+
+The eslint demo forces a rule to create output. Here's a non-git saving with **no tricks** —
+just run the test suite (again, invoke `vitest` directly, not via `bctx yarn test:app`, which
+would use the *yarn* compressor):
+
+```bash
+export PATH="$PWD/node_modules/.bin:$PATH"   # so bctx records the tool as "vitest"
+bctx vitest run
+```
+
+bctx prints a short summary (not the thousands of lines of test progress that scrolled by) and
+ends with a line like:
+
+```
+[bctx: 6982 → 124 tokens, 98% saved]
+```
+
+**~98% on a green run.** The exact numbers move from run to run — and that's the point: bctx
+**keeps any test failures** and drops the passing noise, so a run where a test fails compresses
+*less* (it preserves the failure so you can still see it). That's the tool being selective, not
+blind. In `bctx gain` you'll now see `vitest` alongside `eslint` — two non-git tools, no git.
+
+> On a *clean* repo the most reproducible savings are **git** (4A, exact) and the **source-file
+> reads** (4B/4C, exact). Command savings scale with output volume — eslint and vitest above are
+> real non-git compression; a silent green lint/type-check shows little, which is expected.
 
 ### 4B — Source-file compression (one file)
 
@@ -428,12 +456,11 @@ re-reading the code.
 bctx gain
 ```
 
-You'll see a summary of tokens saved, compression %, and estimated cost avoided, with `git` at
-the top of "TOP COMMANDS". (Your totals depend on how many commands you've run — the important
-part is that the commands from 4A appear and show ~98% compression.)
+You'll see a summary of tokens saved, compression %, and estimated cost avoided, and the tools
+you ran (`git`, `eslint`, `vitest`, …) listed under "TOP COMMANDS". (Your totals depend on which
+commands you've run — the point is that the commands from 4A–4A¾ appear with their compression.)
 
-For a live dashboard:
-make sure you signed in the betterctx.com
+For a live dashboard (it runs locally; sign in at betterctx.com only if you want cloud sync):
 
 ```bash
 bctx dashboard
@@ -475,7 +502,8 @@ records memory — exactly the behavior the Golden Workflow (Part 3) installs.
 |---|---|---|
 | Command-output compression (git) | `bctx git log -n 150` | **98%** (29343→599) |
 | " (big diff) | `bctx git diff HEAD~40 HEAD` | **99%** (~189K→~1.9K) |
-| Command-output compression (non-git) | `bctx eslint … --rule id-length` (4A½) | **100%** (206922→582), `gain` shows `eslint` |
+| Command-output compression (non-git, lint) | `bctx eslint … --rule id-length` (4A½) | **100%** (206922→582), `gain` shows `eslint` |
+| Command-output compression (non-git, tests) | `bctx vitest run` (4A¾) | **~98%** green run (~7K→124); keeps failures |
 | Feature read, outline (lossy) | 5-file loop / `workflow_demo_ts.sh` | **97%** (25217→844) |
 | Feature read, high fidelity | entropy mode | **38%** (25217→15578, ~89% kept) |
 | Whole-dir spectrum | `bctx benchmark packages/element/src` | entropy **33%**@~89% · signatures **82%** (lossy, ⚠) |
@@ -493,6 +521,7 @@ All numbers are with **bctx 0.1.31** on **excalidraw @ 51ca8abde450e44f8f0db1b27
 | git log −n150: 29343→599 (98%) | `bctx git log -n 150` (in the pinned clone) | exact |
 | git diff HEAD~40: ~189K→~1.9K (99%) | `bctx git diff HEAD~40 HEAD` | before ±1% (git version); savings 99% |
 | eslint report: 206922→582 (100%) | `bctx eslint … --rule id-length` (4A½), after `yarn install` | before varies with eslint version; savings ~100% |
+| vitest run: ~7K→124 (~98% green) | `bctx vitest run` (4A¾), after `yarn install` | varies by run; bctx keeps failures so a failing run compresses less |
 | textWrapping.ts sig: 5501→95 (98%) | `bctx read packages/element/src/textWrapping.ts --mode signatures` | exact |
 | 5-file feature, sig: 25217→844 (97%) | loop in 4C, or `workflow_demo_ts.sh` | exact |
 | 5-file feature, entropy: →15578 (38%) | `workflow_demo_ts.sh` | exact |
@@ -518,6 +547,7 @@ high fidelity %; they are different modes.
 | `git diff HEAD~40 HEAD` errors "unknown revision" | Same cause — you need full history; re-clone per Part 2. |
 | `/mcp` shows no `bctx` server | You didn't restart Claude Code after `bctx init`. Fully quit and reopen it. Then `bctx doctor` should show `✓ Claude Code mcp.json`. |
 | `bctx search` prints "no results" | Run `bctx index` first (Part 4E). |
+| `bctx eslint`/`bctx vitest` shows no `[bctx: …]` line | Run `yarn install` first, and invoke the tool **directly** with `node_modules/.bin` on `PATH` (4A½/4A¾) — not via `bctx yarn …`, which uses the *yarn* compressor. A clean/green run also has little to compress. |
 | Numbers are slightly off | Confirm `bctx --version` = 0.1.31 **and** `git rev-parse HEAD` = the pinned commit. Both must match. Small ±1% drift on git diff / benchmark averages is expected (Part 7). |
 | I don't want bctx touching my real data during a test | Prefix a command with an isolated home: `HOME=$(mktemp -d) bctx git log -n 150`. This writes to a throwaway folder, not your `~/.bctx`. |
 
