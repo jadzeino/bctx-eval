@@ -77,8 +77,11 @@ PATH (your prompt should then show `(bctx-venv)`; if `source` errors, do Part 1 
 ```bash
 source ~/Desktop/bctx-venv/bin/activate   # ruff/pytest/mypy live here (Part 1)
 which ruff                                 # sanity check → .../bctx-venv/bin/ruff
-export HOME=$(mktemp -d)                    # isolate the savings ledger for a clean readout
-bctx ruff check --select ALL --no-cache fastapi/     # a deliberately noisy, all-rules lint
+
+# Isolate the gain ledger with a throwaway HOME as a PER-COMMAND prefix (do NOT `export HOME`
+# — that would break every `~/…` path afterwards). Set it once as a shell variable:
+TMPH=$(mktemp -d)
+HOME="$TMPH" bctx ruff check --select ALL --no-cache fastapi/    # a deliberately noisy, all-rules lint
 ```
 
 The compressed summary ends with a line like (your **before** count depends on your ruff
@@ -88,10 +91,11 @@ version; the savings is ~100% because lint output is extremely repetitive):
 [bctx: 237223 → 83 tokens, 100% saved]
 ```
 
-Now check the ledger:
+Now check the ledger — same `HOME="$TMPH"` prefix, so you read the *isolated* ledger you just
+wrote (not your all-time history):
 
 ```bash
-bctx gain
+HOME="$TMPH" bctx gain
 ```
 
 ```
