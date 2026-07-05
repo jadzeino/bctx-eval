@@ -283,8 +283,24 @@ real; they're different trade-offs.**
 >
 > So if you run an agent session and only check `bctx gain`, you'll see your shell commands but
 > **not** the (usually larger) source-read savings — you'd wrongly think the skills did nothing.
-> You measure those with `bctx read` / `bctx benchmark` (above), or by watching the agent call
+> You measure those with `bctx read` / `bctx benchmark` (below), or by watching the agent call
 > `blueprint`/`chisel`/`parallax` instead of reading whole files. Keep both in mind.
+
+### 4C½ — How to SEE the MCP (source-read) savings
+
+Since these don't show in `bctx gain`, here's how to make them visible. `--mode full` is what a
+normal file Read costs the agent; `--mode signatures`/`entropy` is what the skills return
+(they use the same engine). The difference is the saving:
+
+```bash
+bctx read packages/element/src/textWrapping.ts --mode full         # [bctx: 5501 → 5501]  agent's normal cost
+bctx read packages/element/src/textWrapping.ts --mode signatures   # [bctx: 5501 →   95]  blueprint/chisel → 98%
+bctx read packages/element/src/textWrapping.ts --mode entropy      # [bctx: 5501 → 3518]  high-fidelity → 36%
+```
+
+`5501 → 95` is exactly what the agent saves each time it reads that file via a skill instead of
+a full Read. For the whole-directory view, `bctx benchmark` (next section) shows it across every
+file at once.
 
 ### 4D — Whole-directory benchmark (nothing cherry-picked)
 

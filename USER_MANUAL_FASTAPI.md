@@ -123,11 +123,21 @@ tokens **reading source code**, and bctx compresses that through its **MCP skill
 savings never appear in `bctx gain`.** If you run an agent session and then check `bctx gain`,
 you'll only see the shell commands — and wrongly conclude the skills did nothing.
 
-Here's how to actually see the source-read savings. Understanding one feature means reading ~5
-files; as structural outlines (exactly what `blueprint`/`parallax` emit):
+**First, see it on one file.** `--mode full` is what a normal Read costs the agent;
+`--mode signatures`/`entropy` is what the skills return (same engine). The difference is the
+saving:
 
 ```bash
 cd ~/Desktop/full-stack-fastapi-template/backend
+bctx read app/api/routes/users.py --mode full         # [bctx: 1729 → 1729]  agent's normal cost
+bctx read app/api/routes/users.py --mode signatures   # [bctx: 1729 →  137]  blueprint/chisel → 92%
+bctx read app/api/routes/users.py --mode entropy      # [bctx: 1729 → 1052]  high-fidelity → 39%
+```
+
+**Then across a whole feature.** Understanding one feature means reading ~5 files; as structural
+outlines (exactly what `blueprint`/`parallax` emit):
+
+```bash
 for f in app/api/routes/users.py app/models.py app/crud.py app/api/deps.py app/core/security.py; do
   bctx read "$f" --mode signatures 2>&1 >/dev/null
 done
