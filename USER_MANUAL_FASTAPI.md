@@ -22,17 +22,22 @@ If you haven't installed bctx yet, do Part 1 of `USER_MANUAL.md` (Homebrew / cur
 bctx --version        # must say: bctx 0.1.31
 ```
 
-You'll also want a Python venv with a couple of dev tools (any recent versions). We put it at a
-fixed path so you can re-activate it from any folder later:
+You'll also want a Python **virtual environment** ("venv") with a few dev tools. A venv is just a
+folder that holds Python tools without touching the rest of your system. We put it at a fixed
+path so you can re-activate it from anywhere later:
 
 ```bash
-python3 -m venv ~/Desktop/bctx-venv
-source ~/Desktop/bctx-venv/bin/activate
-pip install ruff mypy pytest
+python3 -m venv ~/Desktop/bctx-venv          # 1. create it (once)
+source ~/Desktop/bctx-venv/bin/activate      # 2. activate it — your prompt now shows (bctx-venv)
+pip install ruff mypy pytest                 # 3. install the three tools into it
+which ruff                                    # 4. verify → .../Desktop/bctx-venv/bin/ruff
 ```
 
-> If you open a new Terminal later, re-activate it: `source ~/Desktop/bctx-venv/bin/activate`
-> (your prompt shows `(bctx-venv)` when it's active). All the tool commands below need it active.
+If step 4 prints a path ending in `bctx-venv/bin/ruff`, you're set.
+
+> **Every new Terminal window starts fresh** — the venv is *not* active until you run
+> `source ~/Desktop/bctx-venv/bin/activate` again (prompt shows `(bctx-venv)`). If any command
+> below says `command not found: ruff` (or `mypy`/`pytest`), that's the fix.
 
 ---
 
@@ -50,9 +55,25 @@ git clone --filter=blob:none https://github.com/fastapi/full-stack-fastapi-templ
 ( cd full-stack-fastapi-template && git checkout 3685fb66259fa12f8436ae7f88379fd64ca7cdbd )
 ```
 
+### Where things live — keep this straight (important if Python is new to you)
+
+| Folder | What it is | Used in |
+|---|---|---|
+| `~/Desktop/bctx-venv` | the Python **virtual environment** holding `ruff`/`mypy`/`pytest` | Part 4 (activate it!) |
+| `~/Desktop/fastapi` | the FastAPI **framework** — for the command demos | Part 4 |
+| `~/Desktop/full-stack-fastapi-template/backend` | a realistic **app** — for the source-read demos | Part 5 |
+
+**The golden rule (two steps, every new Terminal window):**
+1. Activate the tools: `source ~/Desktop/bctx-venv/bin/activate` — your prompt then shows
+   `(bctx-venv)` at the front. If you skip this, you'll get `command not found: ruff`.
+2. `cd` into the folder the step names. **Every step below starts with the exact `cd` you need**,
+   so you can copy-paste top to bottom.
+
 ---
 
 ## Part 3 — bctx compresses 111 tools, not just git
+
+*(Run from anywhere — `bctx patterns` is built in, no venv or repo needed.)*
 
 ```bash
 bctx patterns
@@ -71,11 +92,12 @@ The savings scale with how noisy the output is. A clean repo's lint/type checks 
 (little to compress); a **realistically noisy** run compresses enormously. We'll run a full-rule
 lint sweep — the kind of output a legacy repo produces — through bctx.
 
-Run these from inside `~/Desktop/fastapi`. First activate the Part-1 venv so `ruff` is on your
-PATH (your prompt should then show `(bctx-venv)`; if `source` errors, do Part 1 first):
+Copy-paste this whole block (it activates the venv, moves into the framework folder, and runs
+the lint sweep). If `source` errors, you skipped Part 1's venv step:
 
 ```bash
-source ~/Desktop/bctx-venv/bin/activate   # ruff/pytest/mypy live here (Part 1)
+source ~/Desktop/bctx-venv/bin/activate   # activate the tools → prompt shows (bctx-venv)
+cd ~/Desktop/fastapi                       # the FastAPI FRAMEWORK folder
 which ruff                                 # sanity check → .../bctx-venv/bin/ruff
 
 # Isolate the gain ledger with a throwaway HOME as a PER-COMMAND prefix (do NOT `export HOME`
@@ -108,8 +130,11 @@ HOME="$TMPH" bctx gain
 ```
 
 **No `git` in sight.** That's the point of this section: `bctx gain` reflects whatever tools
-you actually run. Add more from your own dev loop — **run these in the same
-`~/Desktop/fastapi` folder, with the Part-1 venv active** (`source ~/Desktop/bctx-venv/bin/activate`):
+you actually run.
+
+**(Optional — skip if Python is new to you.)** Add more from your own dev loop — **run these in
+the same `~/Desktop/fastapi` folder, with the Part-1 venv active**. Note the first one is a full
+dependency install (slow, downloads a lot):
 
 ```bash
 bctx pip install -e ".[all]"   # install the framework + extras INTO your venv — very verbose
@@ -133,6 +158,9 @@ tokens **reading source code**, and bctx compresses that through its **MCP skill
 (`blueprint`, `chisel`, `parallax`, `pinpoint`) — which the agent calls directly. **Those
 savings never appear in `bctx gain`.** If you run an agent session and then check `bctx gain`,
 you'll only see the shell commands — and wrongly conclude the skills did nothing.
+
+*(No venv needed for this Part — `bctx read` is built into bctx. Just `cd` into the app's
+`backend` folder.)*
 
 **First, see it on one file.** `--mode full` is what a normal Read costs the agent;
 `--mode signatures`/`entropy` is what the skills return (same engine). The difference is the
