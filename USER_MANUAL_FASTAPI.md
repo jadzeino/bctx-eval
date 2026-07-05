@@ -22,12 +22,17 @@ If you haven't installed bctx yet, do Part 1 of `USER_MANUAL.md` (Homebrew / cur
 bctx --version        # must say: bctx 0.1.31
 ```
 
-You'll also want a Python venv with a couple of dev tools (any recent versions):
+You'll also want a Python venv with a couple of dev tools (any recent versions). We put it at a
+fixed path so you can re-activate it from any folder later:
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
+python3 -m venv ~/Desktop/bctx-venv
+source ~/Desktop/bctx-venv/bin/activate
 pip install ruff mypy pytest
 ```
+
+> If you open a new Terminal later, re-activate it: `source ~/Desktop/bctx-venv/bin/activate`
+> (your prompt shows `(bctx-venv)` when it's active). All the tool commands below need it active.
 
 ---
 
@@ -98,12 +103,13 @@ bctx gain
 ```
 
 **No `git` in sight.** That's the point of this section: `bctx gain` reflects whatever tools
-you actually run. Add more from your own dev loop and they show up too:
+you actually run. Add more from your own dev loop — **run these in the same
+`~/Desktop/fastapi` folder, with the Part-1 venv active** (`source ~/Desktop/bctx-venv/bin/activate`):
 
 ```bash
-bctx pip install -e ".[all]"   # install the framework + extras — a real install is very verbose
-bctx pytest -v                 # run its test suite (needs the install above) — verbose
-bctx mypy fastapi/             # type-check the package
+bctx pip install -e ".[all]"   # install the framework + extras INTO your venv — very verbose
+bctx pytest -v                 # run the framework's test suite (needs the install above) — verbose
+bctx mypy fastapi/             # type-check the package ('fastapi/' is the package dir, here)
 ```
 
 > **Honest note:** on a *clean* repo, `pytest`/`mypy`/`pip` may print very little, so they
