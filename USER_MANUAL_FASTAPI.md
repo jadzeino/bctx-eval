@@ -71,12 +71,13 @@ The savings scale with how noisy the output is. A clean repo's lint/type checks 
 (little to compress); a **realistically noisy** run compresses enormously. We'll run a full-rule
 lint sweep — the kind of output a legacy repo produces — through bctx.
 
-Run these from inside `~/Desktop/fastapi`, in a **throwaway home** so `bctx gain` shows *only*
-these commands (nothing from your normal usage):
+Run these from inside `~/Desktop/fastapi`. First activate the Part-1 venv so `ruff` is on your
+PATH (your prompt should then show `(bctx-venv)`; if `source` errors, do Part 1 first):
 
 ```bash
-export HOME=$(mktemp -d)          # isolate the savings ledger for a clean readout
-
+source ~/Desktop/bctx-venv/bin/activate   # ruff/pytest/mypy live here (Part 1)
+which ruff                                 # sanity check → .../bctx-venv/bin/ruff
+export HOME=$(mktemp -d)                    # isolate the savings ledger for a clean readout
 bctx ruff check --select ALL --no-cache fastapi/     # a deliberately noisy, all-rules lint
 ```
 
