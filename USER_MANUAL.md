@@ -483,16 +483,27 @@ This shows bctx working *during* real agent work.
    ```
 
 2. Watch the tool calls: you should see bctx skills like `blueprint`, `chisel`, or `parallax`
-   (compressed reads) and a `sediment` call — not full-file reads.
+   returning **short outlines** (not full-file reads), and a `sediment` call. That compressed
+   reading *is* the saving.
 
-3. When it's done, check that your savings grew:
+3. Confirm the memory persisted — back in the Terminal:
 
    ```bash
-   bctx gain
+   bctx recall "text wrapping"
    ```
 
-**What it proves:** in a real session the agent reads code through bctx's compressors and
-records memory — exactly the behavior the Golden Workflow (Part 3) installs.
+   It should return the fact the agent just stored.
+
+> **Don't expect `bctx gain` to jump after this task.** As Part 4C½ explains, the agent's
+> `blueprint`/`chisel` reads are **MCP-skill** savings, which `bctx gain` does **not** count
+> (it tracks *shell* commands only). `bctx gain` will still show only your earlier shell
+> commands (git/eslint/vitest) — that's correct, not a bug. You *see* this task's saving in the
+> tool calls (short outlines vs full files), and you can quantify it with `bctx read --mode full`
+> vs `--mode signatures` (4C½).
+
+**What it proves:** in a real session the agent reads code as cheap outlines (not full files)
+and records memory — exactly the Golden Workflow (Part 3) behavior. The read savings live in the
+agent's context, not the `gain` ledger.
 
 ---
 
