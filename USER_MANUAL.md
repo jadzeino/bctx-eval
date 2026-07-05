@@ -250,9 +250,9 @@ costs **~97% fewer tokens** (25,217→844 is exactly 96.7%). The same 5 files in
 entropy mode total 15,578 tokens (**38% fewer**, ~89% of content kept). **Both numbers are
 real; they're different trade-offs.**
 
-> Want it done for you? Run the bundled script (it prints the totals and both modes):
+> Want it done for you? Run the bundled script (it prints the totals and both modes): just be assure about the 2 paths in this command
 > ```bash
-> BCTX_BIN=$(command -v bctx) ~/Desktop/bctx-eval/PROOF_EXCALIDRAW/workflow_demo_ts.sh
+> BCTX_BIN=$(command -v bctx) ~/Desktop/bctx-eval/PROOF_EXCALIDRAW/workflow_demo_ts.sh [path-to-excalidraw-repo]
 > ```
 
 ### 4D — Whole-directory benchmark (nothing cherry-picked)
@@ -281,7 +281,7 @@ Read this honestly:
 > token count (big files count more), giving signatures **76%** / entropy **34%**. Both are
 > honest — they just average differently. Run it to see:
 > ```bash
-> BCTX_BIN=$(command -v bctx) ~/Desktop/bctx-eval/PROOF_EXCALIDRAW/validate_ts.sh
+> BCTX_BIN=$(command -v bctx) ~/Desktop/bctx-eval/PROOF_EXCALIDRAW/validate_ts.sh [path-to-excalidraw-repo]
 > ```
 
 ### 4E — Code search (relevance, not raw dump)
