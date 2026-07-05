@@ -48,7 +48,6 @@
   },
   "deliverables": [
     "USER_MANUAL.md (primary, whole product, wife-testable, exact outputs, troubleshooting, number-by-number map)",
-    "VIDEO_SCRIPT.md (~5 min screen-record)",
     "PROOF_EXCALIDRAW/{validate_ts.sh, workflow_demo_ts.sh, RESULTS.json, bench_element.json, bench_actions.json}",
     "PROOF/ (existing FastAPI eval, NOTE_TO_ENGINEER.md reframed to whole product + two languages)",
     "RESULTS.json (this file, master)"

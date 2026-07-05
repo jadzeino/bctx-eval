@@ -60,7 +60,6 @@ npm install -g bctx-bin
 | `PROOF_EXCALIDRAW/` | TypeScript proof (excalidraw): `validate_ts.sh`, `workflow_demo_ts.sh`, results + raw benchmark JSON. |
 | `PROOF/` | The Python/FastAPI proof — *your* original repo type, now with the gap fixed. |
 | `RESULTS.json` | Machine-readable summary of both. |
-| `VIDEO_SCRIPT.md` | A 5-minute walkthrough script, if you'd rather watch than run. |
 
 Reproduce the headline numbers in ~2 minutes each:
 ```bash

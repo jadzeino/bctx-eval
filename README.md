@@ -50,7 +50,6 @@ BCTX_BIN=$(command -v bctx) ./PROOF/validate.sh                      # Python/Fa
 | `USER_MANUAL.md` | Guided, testable walkthrough |
 | `COMMANDS_REFERENCE.md` | Full command/skill/extensibility reference |
 | `TO_EVALUATOR.md` | Orientation note |
-| `VIDEO_SCRIPT.md` | 5-minute demo script |
 | `PROOF_EXCALIDRAW/` | TypeScript proof (scripts, results, benchmark JSON) |
 | `PROOF/` | Python/FastAPI proof |
 | `RESULTS.json` | Machine-readable summary of both |
