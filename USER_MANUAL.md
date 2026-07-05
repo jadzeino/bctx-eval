@@ -10,7 +10,8 @@ TypeScript codebase (**excalidraw**). Every command is copy-paste. Every step sh
 minutes. Follow the parts in order.
 
 **What you'll prove (Some parts of the product, as testing the whole product is hard to fully cover):**
-1. bctx automatically **compresses noisy command output** (git, npm, …) — up to **98–99%**.
+1. bctx automatically **compresses noisy command output** — git **98–99%**, a big eslint report
+   **~100%**, and 100+ other tools (not just git).
 2. bctx **compresses source files** an agent reads — a 5-file feature drops **~97%** as an
    outline, or **~38%** while keeping ~89% of the content.
 3. bctx gives the agent **code search** and **persistent memory** across sessions.
@@ -201,20 +202,50 @@ verbose the command, the more it saves.
 bctx patterns
 ```
 
-The more verbose the output, the more it saves. Once you've run `yarn install` in this repo,
-these route through bctx and show up in `bctx gain` too. **Use excalidraw's real script names**
-(there is no `yarn lint`; run `yarn run` to list them all):
+**One key rule:** a tool only shows savings when it produces **substantial output**. A *clean*
+run (a passing lint/type-check/test) is nearly silent — there's nothing to compress, so you'll
+see no `[bctx: …]` line and nothing in `bctx gain`. That's expected, not a failure.
+
+### 4A½ — A non-git tool: compressing a big lint report (eslint)
+
+excalidraw is clean, so its normal lint passes quietly. To see what bctx does with a *real*
+lint report, enable one strict rule — this floods the codebase with findings the way a legacy
+repo naturally would — and run **eslint directly** (not `bctx yarn test:code`, which would make
+bctx use the *yarn* compressor instead of eslint's). You need `yarn install` done first:
 
 ```bash
-bctx yarn test:code        # eslint across the repo (this is excalidraw's "lint")
-bctx yarn test:typecheck   # tsc type-check
-bctx yarn test:update      # vitest updating snapshots — verbose, compresses most
-bctx yarn test:app         # vitest run
+export PATH="$PWD/node_modules/.bin:$PATH"   # so bctx records the tool as "eslint"
+bctx eslint --ext .js,.ts,.tsx --rule '{"id-length":["error",{"min":4}]}' packages excalidraw-app
 ```
 
-A clean run is quiet (little to compress); a run with lots of warnings/failures compresses the
-most, so the `test` runs above show the biggest savings. `bctx gain` will then list each tool
-separately — `eslint`, `vitest`, `tsc` — not just git.
+The command exits with status **1** (eslint "found errors" — expected, we forced the rule);
+bctx still compresses. It ends with:
+
+```
+[bctx: 206922 → 582 tokens, 100% saved]
+```
+
+~207K tokens of lint output collapsed to under 600 — a **100% non-git saving**. Confirm it
+landed in the ledger:
+
+```bash
+bctx gain
+```
+
+```
+  TOP COMMANDS
+  eslint        ████████████████    206.3K saved  100%
+```
+
+**eslint at the top — no git in sight.** (The before-count is stable because excalidraw pins
+its eslint version in `yarn.lock`; it may differ slightly if you use a different eslint. The
+~100% holds regardless — lint reports are extremely repetitive.) This is the TypeScript twin of
+the Python manual's `ruff` demo.
+
+> On a *clean* repo, the reliable everyday savings come from **git** (4A) and the **source-file
+> reads** (4B/4C). Other tools (`vitest`, `tsc`, `pip`/`yarn install`, …) compress in proportion
+> to how noisy their output is — a failing test suite or a big install shows real savings; a
+> green run shows little.
 
 ### 4B — Source-file compression (one file)
 
@@ -442,8 +473,9 @@ records memory — exactly the behavior the Golden Workflow (Part 3) installs.
 
 | Capability | Command | Result |
 |---|---|---|
-| Command-output compression | `bctx git log -n 150` | **98%** (29343→599) |
+| Command-output compression (git) | `bctx git log -n 150` | **98%** (29343→599) |
 | " (big diff) | `bctx git diff HEAD~40 HEAD` | **99%** (~189K→~1.9K) |
+| Command-output compression (non-git) | `bctx eslint … --rule id-length` (4A½) | **100%** (206922→582), `gain` shows `eslint` |
 | Feature read, outline (lossy) | 5-file loop / `workflow_demo_ts.sh` | **97%** (25217→844) |
 | Feature read, high fidelity | entropy mode | **38%** (25217→15578, ~89% kept) |
 | Whole-dir spectrum | `bctx benchmark packages/element/src` | entropy **33%**@~89% · signatures **82%** (lossy, ⚠) |
@@ -460,6 +492,7 @@ All numbers are with **bctx 0.1.31** on **excalidraw @ 51ca8abde450e44f8f0db1b27
 |---|---|---|
 | git log −n150: 29343→599 (98%) | `bctx git log -n 150` (in the pinned clone) | exact |
 | git diff HEAD~40: ~189K→~1.9K (99%) | `bctx git diff HEAD~40 HEAD` | before ±1% (git version); savings 99% |
+| eslint report: 206922→582 (100%) | `bctx eslint … --rule id-length` (4A½), after `yarn install` | before varies with eslint version; savings ~100% |
 | textWrapping.ts sig: 5501→95 (98%) | `bctx read packages/element/src/textWrapping.ts --mode signatures` | exact |
 | 5-file feature, sig: 25217→844 (97%) | loop in 4C, or `workflow_demo_ts.sh` | exact |
 | 5-file feature, entropy: →15578 (38%) | `workflow_demo_ts.sh` | exact |
