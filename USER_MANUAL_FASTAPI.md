@@ -153,10 +153,11 @@ done
 
 Totals: **3,910 → 569 tokens = 85% fewer** to understand the feature (lossy outline, ~20%
 fidelity — structure only). Need the real bodies at high fidelity instead? Use `--mode entropy`
-(~26–39% fewer, ~87% of content kept). Reproduce the full spectrum with the bundled script:
+(~26–39% fewer, ~87% of content kept). Reproduce the full spectrum with the bundled script
+(pass your template's `backend` folder — the script otherwise looks for one next to itself):
 
 ```bash
-BCTX_BIN=$(command -v bctx) ~/Desktop/bctx-eval/PROOF/validate.sh
+BCTX_BIN=$(command -v bctx) ~/Desktop/bctx-eval/PROOF/validate.sh ~/Desktop/full-stack-fastapi-template/backend
 ```
 
 **In a real agent session**, this is automatic: after `bctx init` the Golden Workflow tells the
