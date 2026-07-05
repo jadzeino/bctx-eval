@@ -101,9 +101,9 @@ bctx gain
 you actually run. Add more from your own dev loop and they show up too:
 
 ```bash
-bctx pytest -v                 # your test suite (a failing/verbose run compresses most)
-bctx mypy --strict app/        # type errors
-bctx pip install -r requirements.txt   # a real install is very verbose
+bctx pip install -e ".[all]"   # install the framework + extras — a real install is very verbose
+bctx pytest -v                 # run its test suite (needs the install above) — verbose
+bctx mypy fastapi/             # type-check the package
 ```
 
 > **Honest note:** on a *clean* repo, `pytest`/`mypy`/`pip` may print very little, so they

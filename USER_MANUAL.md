@@ -202,17 +202,19 @@ bctx patterns
 ```
 
 The more verbose the output, the more it saves. Once you've run `yarn install` in this repo,
-these all route through bctx and show up in `bctx gain` too — try the noisy ones:
+these route through bctx and show up in `bctx gain` too. **Use excalidraw's real script names**
+(there is no `yarn lint`; run `yarn run` to list them all):
 
 ```bash
-bctx yarn lint            # eslint across the repo
-bctx yarn test            # vitest run
-bctx eslint packages/     # or the linter directly
-bctx tsc --noEmit         # type-check output
+bctx yarn test:code        # eslint across the repo (this is excalidraw's "lint")
+bctx yarn test:typecheck   # tsc type-check
+bctx yarn test:update      # vitest updating snapshots — verbose, compresses most
+bctx yarn test:app         # vitest run
 ```
 
-A clean run is quiet (little to compress); a run with lots of warnings/failures compresses
-the most. `bctx gain` will list each tool separately — not just git.
+A clean run is quiet (little to compress); a run with lots of warnings/failures compresses the
+most, so the `test` runs above show the biggest savings. `bctx gain` will then list each tool
+separately — `eslint`, `vitest`, `tsc` — not just git.
 
 ### 4B — Source-file compression (one file)
 
