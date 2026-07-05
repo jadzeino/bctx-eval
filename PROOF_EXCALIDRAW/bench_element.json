@@ -1,0 +1,1418 @@
+{
+  "files_scanned": 47,
+  "total_tokens": 221263,
+  "avg_savings_pct": 81.79785750700059,
+  "avg_quality_pct": 23.693831634940402,
+  "results": [
+    {
+      "path": "Scene.ts",
+      "tokens": 2968,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 2968,
+          "tokens_after": 321,
+          "savings_pct": 89.18463611859838,
+          "quality_pct": 14.300271739130432
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 2968,
+          "tokens_after": 2029,
+          "savings_pct": 31.637466307277627,
+          "quality_pct": 86.51834239130434
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 2968,
+          "tokens_after": 2390,
+          "savings_pct": 19.474393530997304,
+          "quality_pct": 58.10122282608696
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 89.18463611859838,
+      "best_quality_pct": 14.300271739130432
+    },
+    {
+      "path": "__tests__/transform.test.ts",
+      "tokens": 5573,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 5573,
+          "tokens_after": 354,
+          "savings_pct": 93.64794545128298,
+          "quality_pct": 7.087726278098269
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 5573,
+          "tokens_after": 4680,
+          "savings_pct": 16.02368562713081,
+          "quality_pct": 87.52735229759298
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 5573,
+          "tokens_after": 5573,
+          "savings_pct": 0.0,
+          "quality_pct": 87.52735229759298
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 93.64794545128298,
+      "best_quality_pct": 7.087726278098269
+    },
+    {
+      "path": "align.ts",
+      "tokens": 545,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 545,
+          "tokens_after": 37,
+          "savings_pct": 93.21100917431193,
+          "quality_pct": 14.48051948051948
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 545,
+          "tokens_after": 462,
+          "savings_pct": 15.229357798165138,
+          "quality_pct": 91.88311688311688
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 545,
+          "tokens_after": 534,
+          "savings_pct": 2.0183486238532113,
+          "quality_pct": 90.6103896103896
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 93.21100917431193,
+      "best_quality_pct": 14.48051948051948
+    },
+    {
+      "path": "arrows/focus.ts",
+      "tokens": 3575,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 3575,
+          "tokens_after": 312,
+          "savings_pct": 91.27272727272727,
+          "quality_pct": 11.48419916192428
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 3575,
+          "tokens_after": 1974,
+          "savings_pct": 44.78321678321679,
+          "quality_pct": 84.7563541876338
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 3575,
+          "tokens_after": 3297,
+          "savings_pct": 7.776223776223776,
+          "quality_pct": 71.87588061995645
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 91.27272727272727,
+      "best_quality_pct": 11.48419916192428
+    },
+    {
+      "path": "arrows/helpers.ts",
+      "tokens": 296,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 296,
+          "tokens_after": 25,
+          "savings_pct": 91.55405405405406,
+          "quality_pct": 9.528875379939208
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 296,
+          "tokens_after": 296,
+          "savings_pct": 0.0,
+          "quality_pct": 95.0
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 296,
+          "tokens_after": 283,
+          "savings_pct": 4.391891891891892,
+          "quality_pct": 84.57446808510637
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 91.55405405405406,
+      "best_quality_pct": 9.528875379939208
+    },
+    {
+      "path": "binding.ts",
+      "tokens": 20756,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 20756,
+          "tokens_after": 20756,
+          "savings_pct": 0.0,
+          "quality_pct": 94.01113172541744
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 20756,
+          "tokens_after": 13539,
+          "savings_pct": 34.77066872229717,
+          "quality_pct": 90.33253301320528
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 20756,
+          "tokens_after": 18816,
+          "savings_pct": 9.346694931586047,
+          "quality_pct": 70.20108043217286
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 34.77066872229717,
+      "best_quality_pct": 90.33253301320528
+    },
+    {
+      "path": "bounds.ts",
+      "tokens": 11980,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 11980,
+          "tokens_after": 653,
+          "savings_pct": 94.54924874791318,
+          "quality_pct": 10.041997803191832
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 11980,
+          "tokens_after": 7111,
+          "savings_pct": 40.64273789649416,
+          "quality_pct": 87.47431672804807
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 11980,
+          "tokens_after": 10929,
+          "savings_pct": 8.772954924874792,
+          "quality_pct": 67.23751373005105
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 94.54924874791318,
+      "best_quality_pct": 10.041997803191832
+    },
+    {
+      "path": "collision.ts",
+      "tokens": 5877,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 5877,
+          "tokens_after": 408,
+          "savings_pct": 93.05768249106687,
+          "quality_pct": 11.726583754372328
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 5877,
+          "tokens_after": 4413,
+          "savings_pct": 24.910668708524756,
+          "quality_pct": 93.79809560823941
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 5877,
+          "tokens_after": 5114,
+          "savings_pct": 12.982814361068574,
+          "quality_pct": 67.49643736235264
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 24.910668708524756,
+      "best_quality_pct": 93.79809560823941
+    },
+    {
+      "path": "comparisons.ts",
+      "tokens": 423,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 423,
+          "tokens_after": 423,
+          "savings_pct": 0.0,
+          "quality_pct": 100.0
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 423,
+          "tokens_after": 218,
+          "savings_pct": 48.46335697399527,
+          "quality_pct": 91.9230769230769
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 423,
+          "tokens_after": 423,
+          "savings_pct": 0.0,
+          "quality_pct": 100.0
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 48.46335697399527,
+      "best_quality_pct": 91.9230769230769
+    },
+    {
+      "path": "cropElement.ts",
+      "tokens": 4154,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 4154,
+          "tokens_after": 189,
+          "savings_pct": 95.45016851227732,
+          "quality_pct": 12.327661485491879
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 4154,
+          "tokens_after": 2980,
+          "savings_pct": 28.26191622532499,
+          "quality_pct": 93.42007434944237
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 4154,
+          "tokens_after": 3982,
+          "savings_pct": 4.140587385652383,
+          "quality_pct": 82.97297971607493
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 28.26191622532499,
+      "best_quality_pct": 93.42007434944237
+    },
+    {
+      "path": "delta.ts",
+      "tokens": 14095,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 14095,
+          "tokens_after": 138,
+          "savings_pct": 99.02092940759134,
+          "quality_pct": 4.2028603986431285
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 14095,
+          "tokens_after": 9841,
+          "savings_pct": 30.18091521816247,
+          "quality_pct": 90.16547312290005
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 14095,
+          "tokens_after": 11247,
+          "savings_pct": 20.205746718694574,
+          "quality_pct": 60.12942482580811
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 99.02092940759134,
+      "best_quality_pct": 4.2028603986431285
+    },
+    {
+      "path": "distance.ts",
+      "tokens": 1095,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1095,
+          "tokens_after": 61,
+          "savings_pct": 94.42922374429223,
+          "quality_pct": 10.603146853146853
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1095,
+          "tokens_after": 478,
+          "savings_pct": 56.347031963470315,
+          "quality_pct": 64.22202797202796
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1095,
+          "tokens_after": 830,
+          "savings_pct": 24.200913242009133,
+          "quality_pct": 66.93181818181819
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 94.42922374429223,
+      "best_quality_pct": 10.603146853146853
+    },
+    {
+      "path": "distribute.ts",
+      "tokens": 776,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 776,
+          "tokens_after": 37,
+          "savings_pct": 95.23195876288659,
+          "quality_pct": 12.523096129837702
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 776,
+          "tokens_after": 588,
+          "savings_pct": 24.22680412371134,
+          "quality_pct": 92.48064918851435
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 776,
+          "tokens_after": 684,
+          "savings_pct": 11.855670103092782,
+          "quality_pct": 71.48064918851435
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 95.23195876288659,
+      "best_quality_pct": 12.523096129837702
+    },
+    {
+      "path": "dragElements.ts",
+      "tokens": 2374,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 2374,
+          "tokens_after": 139,
+          "savings_pct": 94.14490311710195,
+          "quality_pct": 7.598398651495996
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 2374,
+          "tokens_after": 1654,
+          "savings_pct": 30.32855939342881,
+          "quality_pct": 91.92709650231772
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 2374,
+          "tokens_after": 2094,
+          "savings_pct": 11.794439764111205,
+          "quality_pct": 64.24230931310578
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 94.14490311710195,
+      "best_quality_pct": 7.598398651495996
+    },
+    {
+      "path": "duplicate.ts",
+      "tokens": 3258,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 3258,
+          "tokens_after": 259,
+          "savings_pct": 92.05033763044813,
+          "quality_pct": 8.07051530414568
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 3258,
+          "tokens_after": 2310,
+          "savings_pct": 29.097605893186003,
+          "quality_pct": 89.85761332816737
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 3258,
+          "tokens_after": 2529,
+          "savings_pct": 22.375690607734807,
+          "quality_pct": 54.42328554823712
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 92.05033763044813,
+      "best_quality_pct": 8.07051530414568
+    },
+    {
+      "path": "elbowArrow.ts",
+      "tokens": 16990,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 16990,
+          "tokens_after": 655,
+          "savings_pct": 96.14479105356092,
+          "quality_pct": 8.055168826058182
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 16990,
+          "tokens_after": 10804,
+          "savings_pct": 36.409652736904064,
+          "quality_pct": 89.19925380253642
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 16990,
+          "tokens_after": 15491,
+          "savings_pct": 8.822836962919364,
+          "quality_pct": 65.71595306379199
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 96.14479105356092,
+      "best_quality_pct": 8.055168826058182
+    },
+    {
+      "path": "elementLink.ts",
+      "tokens": 554,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 554,
+          "tokens_after": 29,
+          "savings_pct": 94.7653429602888,
+          "quality_pct": 7.926356589147286
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 554,
+          "tokens_after": 319,
+          "savings_pct": 42.418772563176894,
+          "quality_pct": 84.62790697674419
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 554,
+          "tokens_after": 546,
+          "savings_pct": 1.444043321299639,
+          "quality_pct": 86.96124031007751
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 94.7653429602888,
+      "best_quality_pct": 7.926356589147286
+    },
+    {
+      "path": "embeddable.ts",
+      "tokens": 4296,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 4296,
+          "tokens_after": 60,
+          "savings_pct": 98.60335195530726,
+          "quality_pct": 3.211443422523262
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 4296,
+          "tokens_after": 3033,
+          "savings_pct": 29.399441340782122,
+          "quality_pct": 89.8005009358883
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 4296,
+          "tokens_after": 4033,
+          "savings_pct": 6.121973929236499,
+          "quality_pct": 79.00378395119915
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 98.60335195530726,
+      "best_quality_pct": 3.211443422523262
+    },
+    {
+      "path": "flowchart.ts",
+      "tokens": 4768,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 4768,
+          "tokens_after": 311,
+          "savings_pct": 93.47734899328859,
+          "quality_pct": 10.762987846261769
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 4768,
+          "tokens_after": 3356,
+          "savings_pct": 29.61409395973154,
+          "quality_pct": 91.07113729560787
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 4768,
+          "tokens_after": 4335,
+          "savings_pct": 9.081375838926174,
+          "quality_pct": 72.5726458191939
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 93.47734899328859,
+      "best_quality_pct": 10.762987846261769
+    },
+    {
+      "path": "fractionalIndex.ts",
+      "tokens": 3336,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 3336,
+          "tokens_after": 38,
+          "savings_pct": 98.86091127098321,
+          "quality_pct": 1.6076231460846844
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 3336,
+          "tokens_after": 2489,
+          "savings_pct": 25.38968824940048,
+          "quality_pct": 89.77384154307231
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 3336,
+          "tokens_after": 2321,
+          "savings_pct": 30.425659472422062,
+          "quality_pct": 49.311304080534846
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 98.86091127098321,
+      "best_quality_pct": 1.6076231460846844
+    },
+    {
+      "path": "frame.ts",
+      "tokens": 6797,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 6797,
+          "tokens_after": 552,
+          "savings_pct": 91.87877004560836,
+          "quality_pct": 9.677397120792017
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 6797,
+          "tokens_after": 4463,
+          "savings_pct": 34.338678828895105,
+          "quality_pct": 89.0204740197691
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 6797,
+          "tokens_after": 5996,
+          "savings_pct": 11.784610857731352,
+          "quality_pct": 64.03079718658458
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 91.87877004560836,
+      "best_quality_pct": 9.677397120792017
+    },
+    {
+      "path": "groups.ts",
+      "tokens": 3425,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 3425,
+          "tokens_after": 63,
+          "savings_pct": 98.16058394160584,
+          "quality_pct": 3.7281962813877705
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 3425,
+          "tokens_after": 2109,
+          "savings_pct": 38.42335766423358,
+          "quality_pct": 88.35154303239409
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 3425,
+          "tokens_after": 3063,
+          "savings_pct": 10.569343065693431,
+          "quality_pct": 67.32796626413648
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 98.16058394160584,
+      "best_quality_pct": 3.7281962813877705
+    },
+    {
+      "path": "heading.ts",
+      "tokens": 1946,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1946,
+          "tokens_after": 380,
+          "savings_pct": 80.47276464542652,
+          "quality_pct": 16.553030303030305
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1946,
+          "tokens_after": 786,
+          "savings_pct": 59.60945529290853,
+          "quality_pct": 84.4949494949495
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1946,
+          "tokens_after": 1898,
+          "savings_pct": 2.466598150051387,
+          "quality_pct": 81.41414141414141
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 80.47276464542652,
+      "best_quality_pct": 16.553030303030305
+    },
+    {
+      "path": "image.ts",
+      "tokens": 1001,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1001,
+          "tokens_after": 44,
+          "savings_pct": 95.6043956043956,
+          "quality_pct": 5.0128759312057385
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1001,
+          "tokens_after": 748,
+          "savings_pct": 25.274725274725274,
+          "quality_pct": 87.61151476133541
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1001,
+          "tokens_after": 847,
+          "savings_pct": 15.384615384615385,
+          "quality_pct": 64.57509427021061
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 95.6043956043956,
+      "best_quality_pct": 5.0128759312057385
+    },
+    {
+      "path": "index.ts",
+      "tokens": 797,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 797,
+          "tokens_after": 797,
+          "savings_pct": 0.0,
+          "quality_pct": 97.09677419354838
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 797,
+          "tokens_after": 689,
+          "savings_pct": 13.55081555834379,
+          "quality_pct": 94.90927419354837
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 797,
+          "tokens_after": 695,
+          "savings_pct": 12.797992471769135,
+          "quality_pct": 75.99294354838707
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 13.55081555834379,
+      "best_quality_pct": 94.90927419354837
+    },
+    {
+      "path": "linearElementEditor.ts",
+      "tokens": 16991,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 16991,
+          "tokens_after": 16991,
+          "savings_pct": 0.0,
+          "quality_pct": 93.84716732542819
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 16991,
+          "tokens_after": 10543,
+          "savings_pct": 37.94950267788829,
+          "quality_pct": 88.40772919454326
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 16991,
+          "tokens_after": 16056,
+          "savings_pct": 5.502913307044906,
+          "quality_pct": 73.49562915322937
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 37.94950267788829,
+      "best_quality_pct": 88.40772919454326
+    },
+    {
+      "path": "mutateElement.ts",
+      "tokens": 1265,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1265,
+          "tokens_after": 42,
+          "savings_pct": 96.6798418972332,
+          "quality_pct": 4.880578252671277
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1265,
+          "tokens_after": 940,
+          "savings_pct": 25.691699604743086,
+          "quality_pct": 89.01477058453803
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1265,
+          "tokens_after": 1068,
+          "savings_pct": 15.573122529644268,
+          "quality_pct": 62.776555625392824
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 96.6798418972332,
+      "best_quality_pct": 4.880578252671277
+    },
+    {
+      "path": "newElement.ts",
+      "tokens": 3755,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 3755,
+          "tokens_after": 107,
+          "savings_pct": 97.15046604527296,
+          "quality_pct": 7.84561403508772
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 3755,
+          "tokens_after": 2203,
+          "savings_pct": 41.33155792276964,
+          "quality_pct": 84.93801169590644
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 3755,
+          "tokens_after": 3662,
+          "savings_pct": 2.4766977363515315,
+          "quality_pct": 84.54970760233917
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 97.15046604527296,
+      "best_quality_pct": 7.84561403508772
+    },
+    {
+      "path": "positionElementsOnGrid.ts",
+      "tokens": 950,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 950,
+          "tokens_after": 24,
+          "savings_pct": 97.47368421052632,
+          "quality_pct": 3.8391812865497075
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 950,
+          "tokens_after": 650,
+          "savings_pct": 31.57894736842105,
+          "quality_pct": 89.2595029239766
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 950,
+          "tokens_after": 679,
+          "savings_pct": 28.52631578947368,
+          "quality_pct": 59.290935672514614
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 97.47368421052632,
+      "best_quality_pct": 3.8391812865497075
+    },
+    {
+      "path": "renderElement.ts",
+      "tokens": 8470,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 8470,
+          "tokens_after": 437,
+          "savings_pct": 94.84061393152302,
+          "quality_pct": 7.934634974533106
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 8470,
+          "tokens_after": 6009,
+          "savings_pct": 29.05548996458087,
+          "quality_pct": 92.4064091680815
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 8470,
+          "tokens_after": 7822,
+          "savings_pct": 7.650531286894924,
+          "quality_pct": 73.06890209394452
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 94.84061393152302,
+      "best_quality_pct": 7.934634974533106
+    },
+    {
+      "path": "resizeElements.ts",
+      "tokens": 10436,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 10436,
+          "tokens_after": 427,
+          "savings_pct": 95.90839402069759,
+          "quality_pct": 8.151831785345717
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 10436,
+          "tokens_after": 6425,
+          "savings_pct": 38.434266002299736,
+          "quality_pct": 91.05856553147575
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 10436,
+          "tokens_after": 9876,
+          "savings_pct": 5.36604062859333,
+          "quality_pct": 73.0766253869969
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 95.90839402069759,
+      "best_quality_pct": 8.151831785345717
+    },
+    {
+      "path": "resizeTest.ts",
+      "tokens": 1978,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1978,
+          "tokens_after": 184,
+          "savings_pct": 90.69767441860465,
+          "quality_pct": 13.191820604173527
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1978,
+          "tokens_after": 1490,
+          "savings_pct": 24.67138523761375,
+          "quality_pct": 93.19421574204365
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1978,
+          "tokens_after": 1918,
+          "savings_pct": 3.0333670374115265,
+          "quality_pct": 85.80072452920571
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 24.67138523761375,
+      "best_quality_pct": 93.19421574204365
+    },
+    {
+      "path": "selection.ts",
+      "tokens": 1937,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1937,
+          "tokens_after": 91,
+          "savings_pct": 95.30201342281879,
+          "quality_pct": 7.507692307692307
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1937,
+          "tokens_after": 1260,
+          "savings_pct": 34.950955085183274,
+          "quality_pct": 84.66923076923077
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1937,
+          "tokens_after": 1819,
+          "savings_pct": 6.091894682498709,
+          "quality_pct": 74.5
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 95.30201342281879,
+      "best_quality_pct": 7.507692307692307
+    },
+    {
+      "path": "shape.ts",
+      "tokens": 8757,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 8757,
+          "tokens_after": 101,
+          "savings_pct": 98.84663697613338,
+          "quality_pct": 2.1938326578498293
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 8757,
+          "tokens_after": 5164,
+          "savings_pct": 41.03003311636405,
+          "quality_pct": 87.79163555887372
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 8757,
+          "tokens_after": 7915,
+          "savings_pct": 9.615165010848465,
+          "quality_pct": 68.37697312286689
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 98.84663697613338,
+      "best_quality_pct": 2.1938326578498293
+    },
+    {
+      "path": "sizeHelpers.ts",
+      "tokens": 1815,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1815,
+          "tokens_after": 108,
+          "savings_pct": 94.04958677685951,
+          "quality_pct": 8.98376259798432
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1815,
+          "tokens_after": 1062,
+          "savings_pct": 41.48760330578513,
+          "quality_pct": 86.10582306830906
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1815,
+          "tokens_after": 1641,
+          "savings_pct": 9.586776859504132,
+          "quality_pct": 68.70007465472192
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 94.04958677685951,
+      "best_quality_pct": 8.98376259798432
+    },
+    {
+      "path": "sortElements.ts",
+      "tokens": 842,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 842,
+          "tokens_after": 842,
+          "savings_pct": 0.0,
+          "quality_pct": 92.6470588235294
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 842,
+          "tokens_after": 659,
+          "savings_pct": 21.73396674584323,
+          "quality_pct": 90.52584670231728
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 842,
+          "tokens_after": 584,
+          "savings_pct": 30.641330166270787,
+          "quality_pct": 51.10962566844919
+        }
+      ],
+      "best_mode": "aggressive",
+      "best_savings_pct": 30.641330166270787,
+      "best_quality_pct": 51.10962566844919
+    },
+    {
+      "path": "store.ts",
+      "tokens": 6424,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 6424,
+          "tokens_after": 611,
+          "savings_pct": 90.48879202988792,
+          "quality_pct": 14.567870108914882
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 6424,
+          "tokens_after": 4735,
+          "savings_pct": 26.2920298879203,
+          "quality_pct": 89.4508874546188
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 6424,
+          "tokens_after": 4835,
+          "savings_pct": 24.73536737235367,
+          "quality_pct": 54.61073013311819
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 90.48879202988792,
+      "best_quality_pct": 14.567870108914882
+    },
+    {
+      "path": "textElement.ts",
+      "tokens": 3729,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 3729,
+          "tokens_after": 120,
+          "savings_pct": 96.78197908286404,
+          "quality_pct": 7.187499999999999
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 3729,
+          "tokens_after": 2527,
+          "savings_pct": 32.23384285331188,
+          "quality_pct": 88.01785714285714
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 3729,
+          "tokens_after": 3398,
+          "savings_pct": 8.876374363100027,
+          "quality_pct": 80.51785714285714
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 96.78197908286404,
+      "best_quality_pct": 7.187499999999999
+    },
+    {
+      "path": "textMeasurements.ts",
+      "tokens": 1510,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1510,
+          "tokens_after": 90,
+          "savings_pct": 94.03973509933775,
+          "quality_pct": 9.529896907216493
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1510,
+          "tokens_after": 1047,
+          "savings_pct": 30.66225165562914,
+          "quality_pct": 88.75876288659794
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1510,
+          "tokens_after": 1257,
+          "savings_pct": 16.75496688741722,
+          "quality_pct": 59.98556701030927
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 94.03973509933775,
+      "best_quality_pct": 9.529896907216493
+    },
+    {
+      "path": "textWrapping.ts",
+      "tokens": 5702,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 5702,
+          "tokens_after": 131,
+          "savings_pct": 97.70256050508593,
+          "quality_pct": 4.2497487998213686
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 5702,
+          "tokens_after": 3759,
+          "savings_pct": 34.07576289021396,
+          "quality_pct": 85.53377246846043
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 5702,
+          "tokens_after": 3393,
+          "savings_pct": 40.4945633111189,
+          "quality_pct": 43.08256112537679
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 97.70256050508593,
+      "best_quality_pct": 4.2497487998213686
+    },
+    {
+      "path": "transform.ts",
+      "tokens": 5145,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 5145,
+          "tokens_after": 253,
+          "savings_pct": 95.08260447035958,
+          "quality_pct": 8.661065401303091
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 5145,
+          "tokens_after": 2503,
+          "savings_pct": 51.35082604470359,
+          "quality_pct": 87.50018138812705
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 5145,
+          "tokens_after": 4959,
+          "savings_pct": 3.6151603498542273,
+          "quality_pct": 82.57977449828044
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 95.08260447035958,
+      "best_quality_pct": 8.661065401303091
+    },
+    {
+      "path": "transformHandles.ts",
+      "tokens": 2313,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 2313,
+          "tokens_after": 73,
+          "savings_pct": 96.84392563769995,
+          "quality_pct": 6.518518518518518
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 2313,
+          "tokens_after": 1573,
+          "savings_pct": 31.99308257674016,
+          "quality_pct": 91.28518518518518
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 2313,
+          "tokens_after": 2163,
+          "savings_pct": 6.48508430609598,
+          "quality_pct": 66.55555555555554
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 96.84392563769995,
+      "best_quality_pct": 6.518518518518518
+    },
+    {
+      "path": "typeChecks.ts",
+      "tokens": 2767,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 2767,
+          "tokens_after": 128,
+          "savings_pct": 95.37405131911818,
+          "quality_pct": 8.265748915157863
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 2767,
+          "tokens_after": 1793,
+          "savings_pct": 35.20057824358511,
+          "quality_pct": 88.23831612549253
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 2767,
+          "tokens_after": 2634,
+          "savings_pct": 4.806649801228768,
+          "quality_pct": 75.11097810364605
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 95.37405131911818,
+      "best_quality_pct": 8.265748915157863
+    },
+    {
+      "path": "types.ts",
+      "tokens": 3433,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 3433,
+          "tokens_after": 3433,
+          "savings_pct": 0.0,
+          "quality_pct": 95.50761421319797
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 3433,
+          "tokens_after": 2701,
+          "savings_pct": 21.322458491115643,
+          "quality_pct": 92.70101043961306
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 3433,
+          "tokens_after": 2736,
+          "savings_pct": 20.30294203320711,
+          "quality_pct": 72.52178910066085
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 21.322458491115643,
+      "best_quality_pct": 92.70101043961306
+    },
+    {
+      "path": "utils.ts",
+      "tokens": 5285,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 5285,
+          "tokens_after": 774,
+          "savings_pct": 85.35477767265847,
+          "quality_pct": 15.74574311540887
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 5285,
+          "tokens_after": 2561,
+          "savings_pct": 51.54210028382214,
+          "quality_pct": 86.49558545301662
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 5285,
+          "tokens_after": 4905,
+          "savings_pct": 7.190160832544938,
+          "quality_pct": 73.38574731973932
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 85.35477767265847,
+      "best_quality_pct": 15.74574311540887
+    },
+    {
+      "path": "visualdebug.ts",
+      "tokens": 1591,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1591,
+          "tokens_after": 241,
+          "savings_pct": 84.85229415461973,
+          "quality_pct": 15.741156985685556
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1591,
+          "tokens_after": 928,
+          "savings_pct": 41.671904462602136,
+          "quality_pct": 85.90559564651603
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1591,
+          "tokens_after": 1580,
+          "savings_pct": 0.6913890634820867,
+          "quality_pct": 87.2140068614693
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 84.85229415461973,
+      "best_quality_pct": 15.741156985685556
+    },
+    {
+      "path": "zindex.ts",
+      "tokens": 4513,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 4513,
+          "tokens_after": 139,
+          "savings_pct": 96.92000886328384,
+          "quality_pct": 5.553388413732948
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 4513,
+          "tokens_after": 3181,
+          "savings_pct": 29.51473520939508,
+          "quality_pct": 90.47627989242362
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 4513,
+          "tokens_after": 4134,
+          "savings_pct": 8.397961444715268,
+          "quality_pct": 69.80562353112204
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 96.92000886328384,
+      "best_quality_pct": 5.553388413732948
+    }
+  ]
+}

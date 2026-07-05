@@ -1,0 +1,728 @@
+{
+  "files_scanned": 20,
+  "total_tokens": 18003,
+  "avg_savings_pct": 44.38985588046261,
+  "avg_quality_pct": 73.11574557745959,
+  "results": [
+    {
+      "path": "app/alembic/env.py",
+      "tokens": 496,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 496,
+          "tokens_after": 496,
+          "savings_pct": 0.0,
+          "quality_pct": 97.6190476190476
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 496,
+          "tokens_after": 80,
+          "savings_pct": 83.87096774193549,
+          "quality_pct": 20.09281678773204
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 496,
+          "tokens_after": 370,
+          "savings_pct": 25.403225806451612,
+          "quality_pct": 74.83454398708635
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 496,
+          "tokens_after": 357,
+          "savings_pct": 28.024193548387093,
+          "quality_pct": 88.1275221953188
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 83.87096774193549
+    },
+    {
+      "path": "app/alembic/versions/1a31ce608336_add_cascade_delete_relationships.py",
+      "tokens": 302,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 302,
+          "tokens_after": 302,
+          "savings_pct": 0.0,
+          "quality_pct": 98.9655172413793
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 302,
+          "tokens_after": 39,
+          "savings_pct": 87.08609271523179,
+          "quality_pct": 16.372413793103448
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 302,
+          "tokens_after": 243,
+          "savings_pct": 19.5364238410596,
+          "quality_pct": 82.22758620689655
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 302,
+          "tokens_after": 207,
+          "savings_pct": 31.456953642384107,
+          "quality_pct": 93.36551724137931
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 31.456953642384107
+    },
+    {
+      "path": "app/alembic/versions/9c0a54914c78_add_max_length_for_string_varchar_.py",
+      "tokens": 505,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 505,
+          "tokens_after": 505,
+          "savings_pct": 0.0,
+          "quality_pct": 99.45454545454545
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 505,
+          "tokens_after": 39,
+          "savings_pct": 92.27722772277228,
+          "quality_pct": 13.097643097643097
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 505,
+          "tokens_after": 377,
+          "savings_pct": 25.346534653465348,
+          "quality_pct": 87.7878787878788
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 505,
+          "tokens_after": 361,
+          "savings_pct": 28.51485148514851,
+          "quality_pct": 98.15824915824916
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 28.51485148514851
+    },
+    {
+      "path": "app/alembic/versions/d98dd8ec85a3_edit_replace_id_integers_in_all_models_.py",
+      "tokens": 1018,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 1018,
+          "tokens_after": 1018,
+          "savings_pct": 0.0,
+          "quality_pct": 99.55223880597015
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 1018,
+          "tokens_after": 47,
+          "savings_pct": 95.38310412573674,
+          "quality_pct": 8.518943742824339
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1018,
+          "tokens_after": 885,
+          "savings_pct": 13.064833005893908,
+          "quality_pct": 75.9255007016201
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1018,
+          "tokens_after": 691,
+          "savings_pct": 32.121807465618865,
+          "quality_pct": 95.36420461793595
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 32.121807465618865
+    },
+    {
+      "path": "app/alembic/versions/e2412789c190_initialize_models.py",
+      "tokens": 405,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 405,
+          "tokens_after": 405,
+          "savings_pct": 0.0,
+          "quality_pct": 96.80851063829788
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 405,
+          "tokens_after": 39,
+          "savings_pct": 90.37037037037037,
+          "quality_pct": 16.207540126913024
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 405,
+          "tokens_after": 346,
+          "savings_pct": 14.5679012345679,
+          "quality_pct": 83.20268756998878
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 405,
+          "tokens_after": 130,
+          "savings_pct": 67.90123456790124,
+          "quality_pct": 49.656588279208655
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 90.37037037037037
+    },
+    {
+      "path": "app/api/deps.py",
+      "tokens": 365,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 365,
+          "tokens_after": 365,
+          "savings_pct": 0.0,
+          "quality_pct": 97.27272727272727
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 365,
+          "tokens_after": 108,
+          "savings_pct": 70.41095890410959,
+          "quality_pct": 28.82121212121212
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 365,
+          "tokens_after": 363,
+          "savings_pct": 0.547945205479452,
+          "quality_pct": 97.27272727272727
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 365,
+          "tokens_after": 276,
+          "savings_pct": 24.383561643835616,
+          "quality_pct": 89.8060606060606
+        }
+      ],
+      "best_mode": "aggressive",
+      "best_savings_pct": 0.547945205479452
+    },
+    {
+      "path": "app/api/routes/items.py",
+      "tokens": 776,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 776,
+          "tokens_after": 776,
+          "savings_pct": 0.0,
+          "quality_pct": 95.71428571428571
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 776,
+          "tokens_after": 86,
+          "savings_pct": 88.91752577319588,
+          "quality_pct": 14.40512375162831
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 776,
+          "tokens_after": 775,
+          "savings_pct": 0.12886597938144329,
+          "quality_pct": 95.71428571428571
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 776,
+          "tokens_after": 427,
+          "savings_pct": 44.97422680412371,
+          "quality_pct": 82.00390794615717
+        }
+      ],
+      "best_mode": "aggressive",
+      "best_savings_pct": 0.12886597938144329
+    },
+    {
+      "path": "app/api/routes/login.py",
+      "tokens": 843,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 843,
+          "tokens_after": 843,
+          "savings_pct": 0.0,
+          "quality_pct": 93.83177570093457
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 843,
+          "tokens_after": 121,
+          "savings_pct": 85.64650059311981,
+          "quality_pct": 14.031061022539856
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 843,
+          "tokens_after": 800,
+          "savings_pct": 5.100830367734282,
+          "quality_pct": 85.59648158328751
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 843,
+          "tokens_after": 471,
+          "savings_pct": 44.128113879003564,
+          "quality_pct": 75.25632215503025
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 85.64650059311981
+    },
+    {
+      "path": "app/api/routes/users.py",
+      "tokens": 1499,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 1499,
+          "tokens_after": 1499,
+          "savings_pct": 0.0,
+          "quality_pct": 94.20792079207921
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 1499,
+          "tokens_after": 167,
+          "savings_pct": 88.85923949299533,
+          "quality_pct": 13.923886138613861
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1499,
+          "tokens_after": 1498,
+          "savings_pct": 0.06671114076050699,
+          "quality_pct": 94.20792079207921
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1499,
+          "tokens_after": 918,
+          "savings_pct": 38.759172781854566,
+          "quality_pct": 85.02042079207921
+        }
+      ],
+      "best_mode": "aggressive",
+      "best_savings_pct": 0.06671114076050699
+    },
+    {
+      "path": "app/core/config.py",
+      "tokens": 909,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 909,
+          "tokens_after": 909,
+          "savings_pct": 0.0,
+          "quality_pct": 97.87878787878788
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 909,
+          "tokens_after": 122,
+          "savings_pct": 86.57865786578658,
+          "quality_pct": 14.075873236178579
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 909,
+          "tokens_after": 876,
+          "savings_pct": 3.6303630363036308,
+          "quality_pct": 92.2322461253759
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 909,
+          "tokens_after": 601,
+          "savings_pct": 33.88338833883388,
+          "quality_pct": 88.49178811010871
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 86.57865786578658
+    },
+    {
+      "path": "app/core/db.py",
+      "tokens": 247,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 247,
+          "tokens_after": 247,
+          "savings_pct": 0.0,
+          "quality_pct": 98.8
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 247,
+          "tokens_after": 34,
+          "savings_pct": 86.23481781376519,
+          "quality_pct": 15.364705882352942
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 247,
+          "tokens_after": 127,
+          "savings_pct": 48.582995951417004,
+          "quality_pct": 51.6235294117647
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 247,
+          "tokens_after": 226,
+          "savings_pct": 8.502024291497975,
+          "quality_pct": 97.15294117647058
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 8.502024291497975
+    },
+    {
+      "path": "app/crud.py",
+      "tokens": 598,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 598,
+          "tokens_after": 598,
+          "savings_pct": 0.0,
+          "quality_pct": 99.44444444444444
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 598,
+          "tokens_after": 80,
+          "savings_pct": 86.62207357859532,
+          "quality_pct": 15.791962174940899
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 598,
+          "tokens_after": 531,
+          "savings_pct": 11.20401337792642,
+          "quality_pct": 76.35933806146572
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 598,
+          "tokens_after": 419,
+          "savings_pct": 29.93311036789298,
+          "quality_pct": 90.1418439716312
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 86.62207357859532
+    },
+    {
+      "path": "app/models.py",
+      "tokens": 887,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 887,
+          "tokens_after": 887,
+          "savings_pct": 0.0,
+          "quality_pct": 99.02173913043477
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 887,
+          "tokens_after": 244,
+          "savings_pct": 72.49154453213077,
+          "quality_pct": 31.540808543096873
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 887,
+          "tokens_after": 778,
+          "savings_pct": 12.288613303269448,
+          "quality_pct": 81.10030511060258
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 887,
+          "tokens_after": 507,
+          "savings_pct": 42.84103720405862,
+          "quality_pct": 84.86079328756674
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 72.49154453213077
+    },
+    {
+      "path": "app/utils.py",
+      "tokens": 872,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 872,
+          "tokens_after": 872,
+          "savings_pct": 0.0,
+          "quality_pct": 97.40384615384615
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 872,
+          "tokens_after": 152,
+          "savings_pct": 82.56880733944955,
+          "quality_pct": 21.45299145299145
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 872,
+          "tokens_after": 871,
+          "savings_pct": 0.11467889908256881,
+          "quality_pct": 97.40384615384615
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 872,
+          "tokens_after": 497,
+          "savings_pct": 43.0045871559633,
+          "quality_pct": 85.1388888888889
+        }
+      ],
+      "best_mode": "aggressive",
+      "best_savings_pct": 0.11467889908256881
+    },
+    {
+      "path": "tests/api/routes/test_items.py",
+      "tokens": 1217,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 1217,
+          "tokens_after": 1217,
+          "savings_pct": 0.0,
+          "quality_pct": 97.64285714285714
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 1217,
+          "tokens_after": 172,
+          "savings_pct": 85.86688578471652,
+          "quality_pct": 31.62087912087912
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1217,
+          "tokens_after": 1217,
+          "savings_pct": 0.0,
+          "quality_pct": 97.64285714285714
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1217,
+          "tokens_after": 636,
+          "savings_pct": 47.74034511092851,
+          "quality_pct": 86.87362637362637
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 85.86688578471652
+    },
+    {
+      "path": "tests/api/routes/test_login.py",
+      "tokens": 1419,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 1419,
+          "tokens_after": 1419,
+          "savings_pct": 0.0,
+          "quality_pct": 97.84313725490196
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 1419,
+          "tokens_after": 204,
+          "savings_pct": 85.62367864693447,
+          "quality_pct": 21.741231703949182
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1419,
+          "tokens_after": 1341,
+          "savings_pct": 5.496828752642706,
+          "quality_pct": 87.98398232532449
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1419,
+          "tokens_after": 981,
+          "savings_pct": 30.866807610993657,
+          "quality_pct": 93.01436067384698
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 30.866807610993657
+    },
+    {
+      "path": "tests/api/routes/test_users.py",
+      "tokens": 3988,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 3988,
+          "tokens_after": 3988,
+          "savings_pct": 0.0,
+          "quality_pct": 97.6923076923077
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 3988,
+          "tokens_after": 426,
+          "savings_pct": 89.31795386158475,
+          "quality_pct": 21.267985154303727
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 3988,
+          "tokens_after": 3962,
+          "savings_pct": 0.6519558676028084,
+          "quality_pct": 95.72601555747623
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 3988,
+          "tokens_after": 2291,
+          "savings_pct": 42.55265797392177,
+          "quality_pct": 89.82713915298184
+        }
+      ],
+      "best_mode": "aggressive",
+      "best_savings_pct": 0.6519558676028084
+    },
+    {
+      "path": "tests/conftest.py",
+      "tokens": 245,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 245,
+          "tokens_after": 245,
+          "savings_pct": 0.0,
+          "quality_pct": 99.06249999999999
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 245,
+          "tokens_after": 108,
+          "savings_pct": 55.91836734693878,
+          "quality_pct": 45.558510638297875
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 245,
+          "tokens_after": 245,
+          "savings_pct": 0.0,
+          "quality_pct": 99.06249999999999
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 245,
+          "tokens_after": 174,
+          "savings_pct": 28.97959183673469,
+          "quality_pct": 84.1688829787234
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 55.91836734693878
+    },
+    {
+      "path": "tests/crud/test_user.py",
+      "tokens": 1042,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 1042,
+          "tokens_after": 1042,
+          "savings_pct": 0.0,
+          "quality_pct": 99.70588235294117
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 1042,
+          "tokens_after": 187,
+          "savings_pct": 82.05374280230326,
+          "quality_pct": 22.899159663865547
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1042,
+          "tokens_after": 966,
+          "savings_pct": 7.293666026871401,
+          "quality_pct": 85.42016806722688
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1042,
+          "tokens_after": 594,
+          "savings_pct": 42.994241842610364,
+          "quality_pct": 92.56302521008404
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 82.05374280230326
+    },
+    {
+      "path": "tests/utils/user.py",
+      "tokens": 370,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 370,
+          "tokens_after": 370,
+          "savings_pct": 0.0,
+          "quality_pct": 98.46153846153845
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 370,
+          "tokens_after": 73,
+          "savings_pct": 80.27027027027027,
+          "quality_pct": 20.880713489409143
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 370,
+          "tokens_after": 370,
+          "savings_pct": 0.0,
+          "quality_pct": 98.46153846153845
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 370,
+          "tokens_after": 276,
+          "savings_pct": 25.405405405405407,
+          "quality_pct": 96.43255295429208
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 25.405405405405407
+    }
+  ]
+}

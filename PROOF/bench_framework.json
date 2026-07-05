@@ -1,0 +1,944 @@
+{
+  "files_scanned": 26,
+  "total_tokens": 150222,
+  "avg_savings_pct": 57.50994491938823,
+  "avg_quality_pct": 77.64818524773324,
+  "results": [
+    {
+      "path": "__init__.py",
+      "tokens": 217,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 217,
+          "tokens_after": 217,
+          "savings_pct": 0.0,
+          "quality_pct": 100.0
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 217,
+          "tokens_after": 217,
+          "savings_pct": 0.0,
+          "quality_pct": 100.0
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 217,
+          "tokens_after": 217,
+          "savings_pct": 0.0,
+          "quality_pct": 100.0
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 217,
+          "tokens_after": 216,
+          "savings_pct": 0.4608294930875576,
+          "quality_pct": 100.0
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 0.4608294930875576
+    },
+    {
+      "path": "_compat/__init__.py",
+      "tokens": 468,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 468,
+          "tokens_after": 468,
+          "savings_pct": 0.0,
+          "quality_pct": 96.24999999999999
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 468,
+          "tokens_after": 468,
+          "savings_pct": 0.0,
+          "quality_pct": 96.24999999999999
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 468,
+          "tokens_after": 468,
+          "savings_pct": 0.0,
+          "quality_pct": 96.24999999999999
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 468,
+          "tokens_after": 368,
+          "savings_pct": 21.367521367521366,
+          "quality_pct": 79.28030303030302
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 21.367521367521366
+    },
+    {
+      "path": "_compat/shared.py",
+      "tokens": 1562,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 1562,
+          "tokens_after": 1562,
+          "savings_pct": 0.0,
+          "quality_pct": 98.62857142857142
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 1562,
+          "tokens_after": 1562,
+          "savings_pct": 0.0,
+          "quality_pct": 98.62857142857142
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1562,
+          "tokens_after": 1457,
+          "savings_pct": 6.722151088348271,
+          "quality_pct": 87.77585825027684
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1562,
+          "tokens_after": 999,
+          "savings_pct": 36.043533930857876,
+          "quality_pct": 95.37275747508305
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 36.043533930857876
+    },
+    {
+      "path": "_compat/v2.py",
+      "tokens": 4000,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 4000,
+          "tokens_after": 4000,
+          "savings_pct": 0.0,
+          "quality_pct": 97.06976744186046
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 4000,
+          "tokens_after": 533,
+          "savings_pct": 86.675,
+          "quality_pct": 18.323663390074323
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 4000,
+          "tokens_after": 3439,
+          "savings_pct": 14.025000000000002,
+          "quality_pct": 77.26528410453129
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 4000,
+          "tokens_after": 3011,
+          "savings_pct": 24.725,
+          "quality_pct": 93.29309518101174
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 24.725
+    },
+    {
+      "path": "applications.py",
+      "tokens": 34089,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 34089,
+          "tokens_after": 34089,
+          "savings_pct": 0.0,
+          "quality_pct": 93.4096444227959
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 34089,
+          "tokens_after": 1152,
+          "savings_pct": 96.62061075420225,
+          "quality_pct": 12.76868374368675
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 34089,
+          "tokens_after": 32872,
+          "savings_pct": 3.570066590395729,
+          "quality_pct": 87.83463993084246
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 34089,
+          "tokens_after": 21832,
+          "savings_pct": 35.95588019595764,
+          "quality_pct": 92.57177717578828
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 96.62061075420225
+    },
+    {
+      "path": "background.py",
+      "tokens": 382,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 382,
+          "tokens_after": 382,
+          "savings_pct": 0.0,
+          "quality_pct": 94.1304347826087
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 382,
+          "tokens_after": 71,
+          "savings_pct": 81.41361256544502,
+          "quality_pct": 22.46195652173913
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 382,
+          "tokens_after": 378,
+          "savings_pct": 1.0471204188481675,
+          "quality_pct": 92.60326086956522
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 382,
+          "tokens_after": 304,
+          "savings_pct": 20.418848167539267,
+          "quality_pct": 89.9782608695652
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 81.41361256544502
+    },
+    {
+      "path": "concurrency.py",
+      "tokens": 347,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 347,
+          "tokens_after": 347,
+          "savings_pct": 0.0,
+          "quality_pct": 96.75675675675674
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 347,
+          "tokens_after": 75,
+          "savings_pct": 78.38616714697406,
+          "quality_pct": 18.704088704088704
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 347,
+          "tokens_after": 259,
+          "savings_pct": 25.360230547550433,
+          "quality_pct": 59.32432432432433
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 347,
+          "tokens_after": 272,
+          "savings_pct": 21.613832853025936,
+          "quality_pct": 91.45876645876646
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 78.38616714697406
+    },
+    {
+      "path": "datastructures.py",
+      "tokens": 1185,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 1185,
+          "tokens_after": 1185,
+          "savings_pct": 0.0,
+          "quality_pct": 93.75
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 1185,
+          "tokens_after": 240,
+          "savings_pct": 79.74683544303798,
+          "quality_pct": 19.359869646182492
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1185,
+          "tokens_after": 1158,
+          "savings_pct": 2.278481012658228,
+          "quality_pct": 90.8042364990689
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1185,
+          "tokens_after": 608,
+          "savings_pct": 48.69198312236287,
+          "quality_pct": 76.44087523277467
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 79.74683544303798
+    },
+    {
+      "path": "dependencies/models.py",
+      "tokens": 1656,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 1656,
+          "tokens_after": 1656,
+          "savings_pct": 0.0,
+          "quality_pct": 99.14285714285714
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 1656,
+          "tokens_after": 195,
+          "savings_pct": 88.22463768115942,
+          "quality_pct": 28.153846153846153
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1656,
+          "tokens_after": 1620,
+          "savings_pct": 2.1739130434782608,
+          "quality_pct": 91.36507936507937
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1656,
+          "tokens_after": 762,
+          "savings_pct": 53.985507246376805,
+          "quality_pct": 91.36507936507937
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 88.22463768115942
+    },
+    {
+      "path": "dependencies/utils.py",
+      "tokens": 8349,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 8349,
+          "tokens_after": 8349,
+          "savings_pct": 0.0,
+          "quality_pct": 96.9596690796277
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 8349,
+          "tokens_after": 8349,
+          "savings_pct": 0.0,
+          "quality_pct": 96.9596690796277
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 8349,
+          "tokens_after": 7726,
+          "savings_pct": 7.461971493592047,
+          "quality_pct": 84.42633574629438
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 8349,
+          "tokens_after": 4856,
+          "savings_pct": 41.83734578991496,
+          "quality_pct": 88.29893140296448
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 41.83734578991496
+    },
+    {
+      "path": "encoders.py",
+      "tokens": 2499,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 2499,
+          "tokens_after": 2499,
+          "savings_pct": 0.0,
+          "quality_pct": 95.44642857142857
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 2499,
+          "tokens_after": 214,
+          "savings_pct": 91.43657462985195,
+          "quality_pct": 11.119725470259278
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 2499,
+          "tokens_after": 2427,
+          "savings_pct": 2.881152460984394,
+          "quality_pct": 91.4606634468734
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 2499,
+          "tokens_after": 1003,
+          "savings_pct": 59.863945578231295,
+          "quality_pct": 73.49707676664971
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 91.43657462985195
+    },
+    {
+      "path": "exception_handlers.py",
+      "tokens": 257,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 257,
+          "tokens_after": 257,
+          "savings_pct": 0.0,
+          "quality_pct": 96.78571428571428
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 257,
+          "tokens_after": 94,
+          "savings_pct": 63.42412451361867,
+          "quality_pct": 33.452380952380956
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 257,
+          "tokens_after": 257,
+          "savings_pct": 0.0,
+          "quality_pct": 96.78571428571428
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 257,
+          "tokens_after": 179,
+          "savings_pct": 30.35019455252918,
+          "quality_pct": 90.1190476190476
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 63.42412451361867
+    },
+    {
+      "path": "exceptions.py",
+      "tokens": 1599,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 1599,
+          "tokens_after": 1599,
+          "savings_pct": 0.0,
+          "quality_pct": 94.38423645320196
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 1599,
+          "tokens_after": 239,
+          "savings_pct": 85.05315822388994,
+          "quality_pct": 18.39688328912467
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1599,
+          "tokens_after": 1587,
+          "savings_pct": 0.7504690431519699,
+          "quality_pct": 93.75213148920045
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1599,
+          "tokens_after": 989,
+          "savings_pct": 38.14884302689181,
+          "quality_pct": 90.00923645320196
+        }
+      ],
+      "best_mode": "aggressive",
+      "best_savings_pct": 0.7504690431519699
+    },
+    {
+      "path": "openapi/docs.py",
+      "tokens": 2744,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 2744,
+          "tokens_after": 2744,
+          "savings_pct": 0.0,
+          "quality_pct": 92.71929824561403
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 2744,
+          "tokens_after": 83,
+          "savings_pct": 96.97521865889213,
+          "quality_pct": 5.262306251064554
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 2744,
+          "tokens_after": 2718,
+          "savings_pct": 0.9475218658892128,
+          "quality_pct": 91.81314937830012
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 2744,
+          "tokens_after": 1631,
+          "savings_pct": 40.56122448979592,
+          "quality_pct": 83.57009027422926
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 96.97521865889213
+    },
+    {
+      "path": "openapi/models.py",
+      "tokens": 3692,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 3692,
+          "tokens_after": 3692,
+          "savings_pct": 0.0,
+          "quality_pct": 99.46745562130177
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 3692,
+          "tokens_after": 531,
+          "savings_pct": 85.61755146262189,
+          "quality_pct": 24.674556213017752
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 3692,
+          "tokens_after": 3249,
+          "savings_pct": 11.998916576381365,
+          "quality_pct": 88.16568047337279
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 3692,
+          "tokens_after": 2259,
+          "savings_pct": 38.8136511375948,
+          "quality_pct": 84.46745562130178
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 85.61755146262189
+    },
+    {
+      "path": "openapi/utils.py",
+      "tokens": 5105,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 5105,
+          "tokens_after": 5105,
+          "savings_pct": 0.0,
+          "quality_pct": 96.95431472081218
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 5105,
+          "tokens_after": 5105,
+          "savings_pct": 0.0,
+          "quality_pct": 96.95431472081218
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 5105,
+          "tokens_after": 4969,
+          "savings_pct": 2.6640548481880506,
+          "quality_pct": 89.81264420858328
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 5105,
+          "tokens_after": 4337,
+          "savings_pct": 15.04407443682664,
+          "quality_pct": 92.85279187817258
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 15.04407443682664
+    },
+    {
+      "path": "param_functions.py",
+      "tokens": 14520,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 14520,
+          "tokens_after": 14520,
+          "savings_pct": 0.0,
+          "quality_pct": 90.71459319845027
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 14520,
+          "tokens_after": 211,
+          "savings_pct": 98.54683195592287,
+          "quality_pct": 6.24683962578744
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 14520,
+          "tokens_after": 14488,
+          "savings_pct": 0.22038567493112945,
+          "quality_pct": 90.71459319845027
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 14520,
+          "tokens_after": 6678,
+          "savings_pct": 54.00826446280992,
+          "quality_pct": 82.35888512304996
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 98.54683195592287
+    },
+    {
+      "path": "params.py",
+      "tokens": 5755,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 5755,
+          "tokens_after": 5755,
+          "savings_pct": 0.0,
+          "quality_pct": 96.53203342618384
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 5755,
+          "tokens_after": 231,
+          "savings_pct": 95.9860990443093,
+          "quality_pct": 16.224878951599333
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 5755,
+          "tokens_after": 5755,
+          "savings_pct": 0.0,
+          "quality_pct": 96.53203342618384
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 5755,
+          "tokens_after": 405,
+          "savings_pct": 92.96264118158123,
+          "quality_pct": 51.332467144005534
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 95.9860990443093
+    },
+    {
+      "path": "responses.py",
+      "tokens": 990,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 990,
+          "tokens_after": 990,
+          "savings_pct": 0.0,
+          "quality_pct": 98.02631578947367
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 990,
+          "tokens_after": 143,
+          "savings_pct": 85.55555555555556,
+          "quality_pct": 27.14498510427011
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 990,
+          "tokens_after": 988,
+          "savings_pct": 0.20202020202020202,
+          "quality_pct": 98.02631578947367
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 990,
+          "tokens_after": 486,
+          "savings_pct": 50.90909090909091,
+          "quality_pct": 73.99453823237339
+        }
+      ],
+      "best_mode": "aggressive",
+      "best_savings_pct": 0.20202020202020202
+    },
+    {
+      "path": "routing.py",
+      "tokens": 48206,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 48206,
+          "tokens_after": 48206,
+          "savings_pct": 0.0,
+          "quality_pct": 95.04751847940865
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 48206,
+          "tokens_after": 48206,
+          "savings_pct": 0.0,
+          "quality_pct": 95.04751847940865
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 48206,
+          "tokens_after": 46494,
+          "savings_pct": 3.5514251338007714,
+          "quality_pct": 85.90041588693143
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 48206,
+          "tokens_after": 31318,
+          "savings_pct": 35.032983446044064,
+          "quality_pct": 93.31290616925678
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 35.032983446044064
+    },
+    {
+      "path": "security/api_key.py",
+      "tokens": 1978,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 1978,
+          "tokens_after": 1978,
+          "savings_pct": 0.0,
+          "quality_pct": 93.97637795275591
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 1978,
+          "tokens_after": 262,
+          "savings_pct": 86.75429726996967,
+          "quality_pct": 15.57795275590551
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1978,
+          "tokens_after": 1954,
+          "savings_pct": 1.2133468149646107,
+          "quality_pct": 92.46771653543307
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1978,
+          "tokens_after": 938,
+          "savings_pct": 52.578361981799794,
+          "quality_pct": 80.02204724409448
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 86.75429726996967
+    },
+    {
+      "path": "security/http.py",
+      "tokens": 2640,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 2640,
+          "tokens_after": 2640,
+          "savings_pct": 0.0,
+          "quality_pct": 94.26865671641791
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 2640,
+          "tokens_after": 367,
+          "savings_pct": 86.09848484848484,
+          "quality_pct": 17.918427663661888
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 2640,
+          "tokens_after": 2588,
+          "savings_pct": 1.9696969696969695,
+          "quality_pct": 93.03827397665138
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 2640,
+          "tokens_after": 1390,
+          "savings_pct": 47.34848484848485,
+          "quality_pct": 88.10891089108911
+        }
+      ],
+      "best_mode": "aggressive",
+      "best_savings_pct": 1.9696969696969695
+    },
+    {
+      "path": "security/oauth2.py",
+      "tokens": 4764,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 4764,
+          "tokens_after": 4764,
+          "savings_pct": 0.0,
+          "quality_pct": 93.00826446280992
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 4764,
+          "tokens_after": 302,
+          "savings_pct": 93.6607892527288,
+          "quality_pct": 12.223543640395082
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 4764,
+          "tokens_after": 4694,
+          "savings_pct": 1.4693534844668346,
+          "quality_pct": 92.69567627494457
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 4764,
+          "tokens_after": 2566,
+          "savings_pct": 46.137699412258605,
+          "quality_pct": 85.07740374924411
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 93.6607892527288
+    },
+    {
+      "path": "security/open_id_connect_url.py",
+      "tokens": 597,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 597,
+          "tokens_after": 597,
+          "savings_pct": 0.0,
+          "quality_pct": 93.04878048780488
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 597,
+          "tokens_after": 89,
+          "savings_pct": 85.09212730318258,
+          "quality_pct": 14.492029959669678
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 597,
+          "tokens_after": 597,
+          "savings_pct": 0.0,
+          "quality_pct": 93.04878048780488
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 597,
+          "tokens_after": 484,
+          "savings_pct": 18.927973199329983,
+          "quality_pct": 90.84405607835605
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 85.09212730318258
+    },
+    {
+      "path": "sse.py",
+      "tokens": 1578,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 1578,
+          "tokens_after": 1578,
+          "savings_pct": 0.0,
+          "quality_pct": 93.78238341968913
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 1578,
+          "tokens_after": 114,
+          "savings_pct": 92.77566539923954,
+          "quality_pct": 9.072661254130798
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1578,
+          "tokens_after": 1506,
+          "savings_pct": 4.562737642585551,
+          "quality_pct": 88.11513198155929
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1578,
+          "tokens_after": 907,
+          "savings_pct": 42.52217997465146,
+          "quality_pct": 86.46158867447268
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 92.77566539923954
+    },
+    {
+      "path": "utils.py",
+      "tokens": 1043,
+      "modes": [
+        {
+          "mode": "map",
+          "tokens_before": 1043,
+          "tokens_after": 1043,
+          "savings_pct": 0.0,
+          "quality_pct": 97.13043478260869
+        },
+        {
+          "mode": "signatures",
+          "tokens_before": 1043,
+          "tokens_after": 1043,
+          "savings_pct": 0.0,
+          "quality_pct": 97.13043478260869
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1043,
+          "tokens_after": 1010,
+          "savings_pct": 3.1639501438159154,
+          "quality_pct": 93.09197324414716
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1043,
+          "tokens_after": 762,
+          "savings_pct": 26.94151486097795,
+          "quality_pct": 88.31270903010034
+        }
+      ],
+      "best_mode": "aggressive",
+      "best_savings_pct": 3.1639501438159154
+    }
+  ]
+}

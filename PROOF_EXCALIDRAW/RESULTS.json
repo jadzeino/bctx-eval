@@ -1,0 +1,67 @@
+{
+  "summary": "bctx TypeScript evaluation on excalidraw — whole-product proof that bctx is not Python-specific. Numbers measured with bctx v0.1.31 on a pinned excalidraw checkout; honest fidelity labeling.",
+  "product_version": "bctx 0.1.31",
+  "repo": "github.com/excalidraw/excalidraw",
+  "pinned_commit": "51ca8abde450e44f8f0db1b2708e0408915c7ab1",
+  "pinned_date": "2026-07-03",
+  "clone_command": "git clone --filter=blob:none https://github.com/excalidraw/excalidraw.git && cd excalidraw && git checkout 51ca8abde450e44f8f0db1b2708e0408915c7ab1",
+  "measurement_note": "All numbers reproduce exactly at the pinned commit with bctx 0.1.31. Read every savings number WITH its fidelity. Fidelity = bctx identifier-coverage metric (how much of the original content survives). Token-weighted where aggregated.",
+  "benchmark_whole_dir": {
+    "packages/element/src": {
+      "files_scanned": 47,
+      "total_tokens": 221263,
+      "entropy_high_fidelity": { "savings_pct": 34, "fidelity_pct": 89 },
+      "signatures_structural_outline_LOSSY": { "savings_pct": 76, "fidelity_pct": 20 },
+      "auto_pick_1file_tradeoff": { "savings_pct": 82, "matched_fidelity_pct": 24 },
+      "signatures_zero_fallback_files": "6 of 47 (barrel index.ts, types.ts + large files the TS outline parser skips); already included in the token-weighted averages"
+    },
+    "packages/excalidraw/actions": {
+      "files_scanned": 36,
+      "total_tokens": 62907,
+      "entropy_high_fidelity": { "savings_pct": 34, "fidelity_pct": 89 },
+      "signatures_structural_outline_LOSSY": { "savings_pct": 63, "fidelity_pct": 29 },
+      "auto_pick_1file_tradeoff": { "savings_pct": 66, "matched_fidelity_pct": 41 },
+      "signatures_zero_fallback_files": "6 of 36"
+    }
+  },
+  "multi_file_feature_read": {
+    "note": "The number that matters: 5 files an agent opens to understand the 'text element' feature, via the exact `bctx read` path (blueprint/chisel/parallax emit the same outlines).",
+    "files": [
+      "packages/element/src/textElement.ts",
+      "packages/element/src/textWrapping.ts",
+      "packages/element/src/textMeasurements.ts",
+      "packages/element/src/newElement.ts",
+      "packages/element/src/bounds.ts"
+    ],
+    "before_tokens": 25217,
+    "signatures_LOSSY": { "after_tokens": 844, "savings_pct": 97, "fidelity_note": "structure only, ~20% fidelity — for understanding/navigation, not editing" },
+    "entropy_high_fidelity": { "after_tokens": 15578, "savings_pct": 38, "fidelity_note": "~89% fidelity, keeps bodies — near-lossless" }
+  },
+  "per_file_signatures_read_lossy": {
+    "packages/element/src/textElement.ts": "3773 -> 103 tokens (97%)",
+    "packages/element/src/textWrapping.ts": "5501 -> 95 tokens (98%)",
+    "packages/element/src/bounds.ts": "10932 -> 491 tokens (96%)",
+    "packages/element/src/linearElementEditor.ts": "18328 -> 18328 tokens (0% — HONEST fallback: this file's TS constructs are skipped by the signatures parser)"
+  },
+  "command_output_compression": {
+    "note": "Automatic shell-hook compression of noisy git output, recorded to `bctx gain`. Run with an isolated HOME so it doesn't touch your real ~/.bctx.",
+    "git_log_n150": { "before_tokens": 29343, "after_tokens": 599, "savings_pct": 98, "reproduces": "bit-exact at pinned commit" },
+    "git_diff_HEAD~40_HEAD": { "before_tokens": 189311, "after_tokens": 1888, "savings_pct": 99, "tolerance": "before-token count may vary ~1% with local git version/config; savings stays 99%" }
+  },
+  "code_search": {
+    "note": "bctx search is a RELEVANCE tool (ranked, symbol-aware across the whole indexed repo), NOT a token-savings tool. For a narrow literal string, grep output is smaller. No token-savings percentage is claimed for search.",
+    "example_query": "text wrapping",
+    "behavior": "returns ranked file::symbol locations with relevance scores"
+  },
+  "memory": {
+    "note": "Concrete, cross-process: an agent stores a fact via the `sediment` MCP tool; `bctx recall <query>` reads it back from the terminal. Confirmed round-trip.",
+    "demo_query": "text wrapping",
+    "recall_returns": "[resonant] codebase/<key> (confidence: 95%) + value + tags"
+  },
+  "honest_headline": "Understanding an excalidraw feature (5 files as outlines) costs 97% fewer tokens (25217->844, lossy structural). High-fidelity entropy mode: ~34% fewer keeping ~89% content, consistent across dirs. Lossy signatures outline: ~63-76% token-weighted (~20-29% fidelity). Automatic git command compression: 98-99%. Same honest bands as the Python/FastAPI eval — bctx is not Python-specific.",
+  "install_paths_verified_v0_1_31": {
+    "homebrew": "brew tap better-ctx-org/bctx && brew install bctx -> 0.1.31",
+    "install_sh": "curl install.sh -> resolves latest -> 0.1.31",
+    "npm": "npm install -g bctx-bin -> 0.1.31 (published package correct; local repo package.json cosmetically stale at 0.1.22)"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "summary": "bctx whole-product investor evaluation. Two language proofs (Python/FastAPI + TypeScript/excalidraw) plus a wife-testable install->verify manual. Every number measured with bctx v0.1.31 and reproducible; fidelity honestly labeled.",
+  "product_version": "bctx 0.1.31",
+  "primary_deliverable": "USER_MANUAL.md",
+  "install_paths_verified_v0_1_31": {
+    "homebrew": "brew tap better-ctx-org/bctx && brew install better-ctx-org/bctx/bctx -> 0.1.31 (verified: `brew info` reports stable 0.1.31)",
+    "install_sh": "curl install.sh -> resolves GitHub latest -> 0.1.31 (verified)",
+    "npm": "npm install -g bctx-bin -> 0.1.31 (verified: `npm view bctx-bin version` = 0.1.31; local repo packages/bctx-bin/package.json cosmetically stale at 0.1.22, published package correct)",
+    "note": "No release required; all public channels already serve 0.1.31."
+  },
+  "whole_product_capabilities_proven": {
+    "command_output_compression": "automatic shell-hook compression across 111 tool families; excalidraw git log -n150 = 98%, git diff HEAD~40 = 99%",
+    "source_file_compression": "MCP skills (blueprint/chisel/parallax) steered by the Golden Workflow installed by `bctx init`",
+    "code_search": "compass/scanner ranked symbol-aware search — relevance tool, NOT claimed as a token saving vs grep",
+    "memory": "sediment (MCP) -> `bctx recall` (CLI) cross-process round-trip, demonstrated concretely",
+    "savings_reporting": "bctx gain + bctx dashboard"
+  },
+  "typescript_eval": {
+    "repo": "github.com/excalidraw/excalidraw",
+    "pinned_commit": "51ca8abde450e44f8f0db1b2708e0408915c7ab1",
+    "folder": "PROOF_EXCALIDRAW/",
+    "headline": {
+      "feature_read_signatures_LOSSY": { "before": 25217, "after": 844, "savings_pct": 97, "fidelity": "~20% (structure only)" },
+      "feature_read_entropy_high_fidelity": { "before": 25217, "after": 15578, "savings_pct": 38, "fidelity": "~89%" },
+      "benchmark_element_src": { "files": 47, "entropy": "34%@89%", "signatures_token_weighted": "76%@20% (lossy)", "auto_pick": "82%@24%" },
+      "benchmark_excalidraw_actions": { "files": 36, "entropy": "34%@89%", "signatures_token_weighted": "63%@29% (lossy)" },
+      "command_compression": { "git_log_n150": "98% (29343->599)", "git_diff_HEAD~40": "99% (~189K->~1.9K, before-token ±1% by git version)" },
+      "honest_caveats": "6 of 47 element files fall back to ~0% in signatures mode (barrel/type/large files); already included in token-weighted averages. bctx benchmark 'average' row is a simple per-file mean (signatures 82%) vs validate_ts.sh token-weighted (76%) — both honest."
+    }
+  },
+  "python_eval": {
+    "repo": "fastapi/full-stack-fastapi-template + fastapi/fastapi",
+    "folder": "PROOF/",
+    "status": "shipped in v0.1.30/0.1.31; preserved unchanged",
+    "headline": {
+      "feature_read_signatures_LOSSY": { "before": 3910, "after": 569, "savings_pct": 85 },
+      "entropy_high_fidelity": "~26-39% @ ~87%",
+      "signatures_LOSSY": "~79-86% @ ~20%",
+      "auto_pick_1file": "44-63% (conservative summary, not headline)"
+    }
+  },
+  "honesty_guardrails": {
+    "rule_1": "Lead with multi-file feature read (lossy structural) and entropy high-fidelity; both clearly labeled.",
+    "rule_2": "Signatures fidelity is ~20% (lossy) — NEVER paired with a high-fidelity number.",
+    "rule_3": "bctx benchmark single-file auto-pick is a conservative summary, not a headline.",
+    "rule_4": "Code search is relevance, not a token-savings claim.",
+    "rule_5": "No competitor names in the repo/deliverables. PDF/document/image compression out of scope."
+  },
+  "deliverables": [
+    "USER_MANUAL.md (primary, whole product, wife-testable, exact outputs, troubleshooting, number-by-number map)",
+    "VIDEO_SCRIPT.md (~5 min screen-record)",
+    "PROOF_EXCALIDRAW/{validate_ts.sh, workflow_demo_ts.sh, RESULTS.json, bench_element.json, bench_actions.json}",
+    "PROOF/ (existing FastAPI eval, NOTE_TO_ENGINEER.md reframed to whole product + two languages)",
+    "RESULTS.json (this file, master)"
+  ]
+}

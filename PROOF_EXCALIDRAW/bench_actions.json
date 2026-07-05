@@ -1,0 +1,1088 @@
+{
+  "files_scanned": 36,
+  "total_tokens": 62907,
+  "avg_savings_pct": 65.67257167932202,
+  "avg_quality_pct": 40.654847183377925,
+  "results": [
+    {
+      "path": "actionAddToLibrary.ts",
+      "tokens": 393,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 393,
+          "tokens_after": 393,
+          "savings_pct": 0.0,
+          "quality_pct": 91.35593220338983
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 393,
+          "tokens_after": 370,
+          "savings_pct": 5.852417302798982,
+          "quality_pct": 91.35593220338983
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 393,
+          "tokens_after": 393,
+          "savings_pct": 0.0,
+          "quality_pct": 91.35593220338983
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 5.852417302798982,
+      "best_quality_pct": 91.35593220338983
+    },
+    {
+      "path": "actionAlign.tsx",
+      "tokens": 2042,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 2042,
+          "tokens_after": 140,
+          "savings_pct": 93.1439764936337,
+          "quality_pct": 14.445301542776997
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 2042,
+          "tokens_after": 675,
+          "savings_pct": 66.94417238001958,
+          "quality_pct": 76.91199158485273
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 2042,
+          "tokens_after": 2031,
+          "savings_pct": 0.5386875612144956,
+          "quality_pct": 89.93267882187939
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 93.1439764936337,
+      "best_quality_pct": 14.445301542776997
+    },
+    {
+      "path": "actionBoundText.tsx",
+      "tokens": 2352,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 2352,
+          "tokens_after": 197,
+          "savings_pct": 91.62414965986395,
+          "quality_pct": 11.361434939139379
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 2352,
+          "tokens_after": 1894,
+          "savings_pct": 19.472789115646258,
+          "quality_pct": 91.2759300531459
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 2352,
+          "tokens_after": 2323,
+          "savings_pct": 1.2329931972789114,
+          "quality_pct": 88.77785873478486
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 91.62414965986395,
+      "best_quality_pct": 11.361434939139379
+    },
+    {
+      "path": "actionCanvas.tsx",
+      "tokens": 3658,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 3658,
+          "tokens_after": 192,
+          "savings_pct": 94.75123018042646,
+          "quality_pct": 16.370156826568266
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 3658,
+          "tokens_after": 2936,
+          "savings_pct": 19.737561509021322,
+          "quality_pct": 90.50876383763837
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 3658,
+          "tokens_after": 3506,
+          "savings_pct": 4.155276107162384,
+          "quality_pct": 81.28067343173431
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 94.75123018042646,
+      "best_quality_pct": 16.370156826568266
+    },
+    {
+      "path": "actionClipboard.tsx",
+      "tokens": 1827,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1827,
+          "tokens_after": 97,
+          "savings_pct": 94.69074986316366,
+          "quality_pct": 10.027758501040942
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1827,
+          "tokens_after": 1352,
+          "savings_pct": 25.998905309250137,
+          "quality_pct": 89.96370042171569
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1827,
+          "tokens_after": 1761,
+          "savings_pct": 3.6124794745484397,
+          "quality_pct": 82.50653926226444
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 94.69074986316366,
+      "best_quality_pct": 10.027758501040942
+    },
+    {
+      "path": "actionCropEditor.tsx",
+      "tokens": 388,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 388,
+          "tokens_after": 70,
+          "savings_pct": 81.95876288659794,
+          "quality_pct": 18.62685560053981
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 388,
+          "tokens_after": 365,
+          "savings_pct": 5.927835051546391,
+          "quality_pct": 93.65384615384616
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 388,
+          "tokens_after": 388,
+          "savings_pct": 0.0,
+          "quality_pct": 93.65384615384616
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 5.927835051546391,
+      "best_quality_pct": 93.65384615384616
+    },
+    {
+      "path": "actionDeleteSelected.test.tsx",
+      "tokens": 1280,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1280,
+          "tokens_after": 193,
+          "savings_pct": 84.921875,
+          "quality_pct": 18.311377245508982
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1280,
+          "tokens_after": 833,
+          "savings_pct": 34.921875,
+          "quality_pct": 92.81437125748502
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1280,
+          "tokens_after": 1280,
+          "savings_pct": 0.0,
+          "quality_pct": 92.81437125748502
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 84.921875,
+      "best_quality_pct": 18.311377245508982
+    },
+    {
+      "path": "actionDeleteSelected.tsx",
+      "tokens": 2191,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 2191,
+          "tokens_after": 206,
+          "savings_pct": 90.59790050205385,
+          "quality_pct": 10.008760751831794
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 2191,
+          "tokens_after": 1308,
+          "savings_pct": 40.30123231401186,
+          "quality_pct": 88.02325581395348
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 2191,
+          "tokens_after": 2092,
+          "savings_pct": 4.518484710178001,
+          "quality_pct": 78.97100987575661
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 90.59790050205385,
+      "best_quality_pct": 10.008760751831794
+    },
+    {
+      "path": "actionDeselect.ts",
+      "tokens": 943,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 943,
+          "tokens_after": 49,
+          "savings_pct": 94.80381760339343,
+          "quality_pct": 8.886363636363637
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 943,
+          "tokens_after": 645,
+          "savings_pct": 31.601272534464474,
+          "quality_pct": 89.71590909090908
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 943,
+          "tokens_after": 943,
+          "savings_pct": 0.0,
+          "quality_pct": 94.09090909090908
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 94.80381760339343,
+      "best_quality_pct": 8.886363636363637
+    },
+    {
+      "path": "actionDistribute.tsx",
+      "tokens": 955,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 955,
+          "tokens_after": 129,
+          "savings_pct": 86.49214659685865,
+          "quality_pct": 17.836990595611287
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 955,
+          "tokens_after": 851,
+          "savings_pct": 10.890052356020941,
+          "quality_pct": 94.81818181818181
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 955,
+          "tokens_after": 945,
+          "savings_pct": 1.0471204188481675,
+          "quality_pct": 88.91327063740857
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 10.890052356020941,
+      "best_quality_pct": 94.81818181818181
+    },
+    {
+      "path": "actionDuplicateSelection.test.tsx",
+      "tokens": 3606,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 3606,
+          "tokens_after": 513,
+          "savings_pct": 85.77371048252913,
+          "quality_pct": 16.935955739651824
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 3606,
+          "tokens_after": 1661,
+          "savings_pct": 53.93788130892956,
+          "quality_pct": 91.42513686527822
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 3606,
+          "tokens_after": 3564,
+          "savings_pct": 1.1647254575707155,
+          "quality_pct": 88.62960924600989
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 85.77371048252913,
+      "best_quality_pct": 16.935955739651824
+    },
+    {
+      "path": "actionDuplicateSelection.tsx",
+      "tokens": 858,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 858,
+          "tokens_after": 156,
+          "savings_pct": 81.81818181818183,
+          "quality_pct": 18.099036224659354
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 858,
+          "tokens_after": 764,
+          "savings_pct": 10.955710955710956,
+          "quality_pct": 92.70355599867065
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 858,
+          "tokens_after": 830,
+          "savings_pct": 3.263403263403263,
+          "quality_pct": 85.58657361249584
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 81.81818181818183,
+      "best_quality_pct": 18.099036224659354
+    },
+    {
+      "path": "actionElementLink.ts",
+      "tokens": 669,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 669,
+          "tokens_after": 67,
+          "savings_pct": 89.98505231689087,
+          "quality_pct": 15.392945544554454
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 669,
+          "tokens_after": 449,
+          "savings_pct": 32.884902840059794,
+          "quality_pct": 88.49628712871286
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 669,
+          "tokens_after": 669,
+          "savings_pct": 0.0,
+          "quality_pct": 92.87128712871286
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 89.98505231689087,
+      "best_quality_pct": 15.392945544554454
+    },
+    {
+      "path": "actionElementLock.test.tsx",
+      "tokens": 461,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 461,
+          "tokens_after": 75,
+          "savings_pct": 83.73101952277658,
+          "quality_pct": 17.768361581920903
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 461,
+          "tokens_after": 254,
+          "savings_pct": 44.90238611713666,
+          "quality_pct": 75.0693374422188
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 461,
+          "tokens_after": 453,
+          "savings_pct": 1.735357917570499,
+          "quality_pct": 89.2347200821777
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 83.73101952277658,
+      "best_quality_pct": 17.768361581920903
+    },
+    {
+      "path": "actionElementLock.ts",
+      "tokens": 1492,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1492,
+          "tokens_after": 1492,
+          "savings_pct": 0.0,
+          "quality_pct": 94.0
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1492,
+          "tokens_after": 917,
+          "savings_pct": 38.53887399463807,
+          "quality_pct": 89.04424778761062
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1492,
+          "tokens_after": 1438,
+          "savings_pct": 3.6193029490616624,
+          "quality_pct": 85.2982540062186
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 38.53887399463807,
+      "best_quality_pct": 89.04424778761062
+    },
+    {
+      "path": "actionExport.tsx",
+      "tokens": 3246,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 3246,
+          "tokens_after": 227,
+          "savings_pct": 93.0067775723968,
+          "quality_pct": 12.856611854066502
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 3246,
+          "tokens_after": 1648,
+          "savings_pct": 49.2298213185459,
+          "quality_pct": 78.55537150014142
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 3246,
+          "tokens_after": 3133,
+          "savings_pct": 3.48120764017252,
+          "quality_pct": 84.68789139832734
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 93.0067775723968,
+      "best_quality_pct": 12.856611854066502
+    },
+    {
+      "path": "actionFinalize.tsx",
+      "tokens": 2663,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 2663,
+          "tokens_after": 205,
+          "savings_pct": 92.3019151333083,
+          "quality_pct": 12.459640432948083
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 2663,
+          "tokens_after": 1933,
+          "savings_pct": 27.412692452121668,
+          "quality_pct": 87.80498991010823
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 2663,
+          "tokens_after": 2458,
+          "savings_pct": 7.698084866691701,
+          "quality_pct": 75.99064391854705
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 92.3019151333083,
+      "best_quality_pct": 12.459640432948083
+    },
+    {
+      "path": "actionFlip.test.tsx",
+      "tokens": 1567,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1567,
+          "tokens_after": 136,
+          "savings_pct": 91.32099553286534,
+          "quality_pct": 16.48845536485986
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1567,
+          "tokens_after": 1204,
+          "savings_pct": 23.165283982131463,
+          "quality_pct": 94.56043956043956
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1567,
+          "tokens_after": 1567,
+          "savings_pct": 0.0,
+          "quality_pct": 94.56043956043956
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 23.165283982131463,
+      "best_quality_pct": 94.56043956043956
+    },
+    {
+      "path": "actionFlip.ts",
+      "tokens": 1328,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1328,
+          "tokens_after": 213,
+          "savings_pct": 83.96084337349397,
+          "quality_pct": 17.51893939393939
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1328,
+          "tokens_after": 1028,
+          "savings_pct": 22.590361445783135,
+          "quality_pct": 86.30681818181817
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1328,
+          "tokens_after": 1256,
+          "savings_pct": 5.421686746987952,
+          "quality_pct": 76.5909090909091
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 83.96084337349397,
+      "best_quality_pct": 17.51893939393939
+    },
+    {
+      "path": "actionFrame.ts",
+      "tokens": 1502,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1502,
+          "tokens_after": 176,
+          "savings_pct": 88.28229027962716,
+          "quality_pct": 14.014202172096907
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1502,
+          "tokens_after": 1088,
+          "savings_pct": 27.563249001331556,
+          "quality_pct": 89.96658312447785
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1502,
+          "tokens_after": 1482,
+          "savings_pct": 1.3315579227696404,
+          "quality_pct": 89.35254803675856
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 88.28229027962716,
+      "best_quality_pct": 14.014202172096907
+    },
+    {
+      "path": "actionGroup.tsx",
+      "tokens": 2244,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 2244,
+          "tokens_after": 206,
+          "savings_pct": 90.81996434937611,
+          "quality_pct": 13.652050424091508
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 2244,
+          "tokens_after": 1861,
+          "savings_pct": 17.067736185383247,
+          "quality_pct": 92.11501050501904
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 2244,
+          "tokens_after": 2111,
+          "savings_pct": 5.926916221033869,
+          "quality_pct": 78.96583923430083
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 90.81996434937611,
+      "best_quality_pct": 13.652050424091508
+    },
+    {
+      "path": "actionHistory.tsx",
+      "tokens": 1024,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1024,
+          "tokens_after": 87,
+          "savings_pct": 91.50390625,
+          "quality_pct": 16.91
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1024,
+          "tokens_after": 863,
+          "savings_pct": 15.72265625,
+          "quality_pct": 88.42230769230768
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1024,
+          "tokens_after": 1006,
+          "savings_pct": 1.7578125,
+          "quality_pct": 87.50923076923075
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 91.50390625,
+      "best_quality_pct": 16.91
+    },
+    {
+      "path": "actionLinearEditor.tsx",
+      "tokens": 1371,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1371,
+          "tokens_after": 127,
+          "savings_pct": 90.73668854850474,
+          "quality_pct": 17.50579839429081
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1371,
+          "tokens_after": 865,
+          "savings_pct": 36.90736688548505,
+          "quality_pct": 86.48884924174844
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1371,
+          "tokens_after": 1323,
+          "savings_pct": 3.50109409190372,
+          "quality_pct": 84.90544157002675
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 90.73668854850474,
+      "best_quality_pct": 17.50579839429081
+    },
+    {
+      "path": "actionLink.tsx",
+      "tokens": 456,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 456,
+          "tokens_after": 98,
+          "savings_pct": 78.50877192982456,
+          "quality_pct": 24.719419924337956
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 456,
+          "tokens_after": 365,
+          "savings_pct": 19.956140350877195,
+          "quality_pct": 87.92244640605296
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 456,
+          "tokens_after": 456,
+          "savings_pct": 0.0,
+          "quality_pct": 94.8076923076923
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 78.50877192982456,
+      "best_quality_pct": 24.719419924337956
+    },
+    {
+      "path": "actionNavigate.tsx",
+      "tokens": 1001,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1001,
+          "tokens_after": 79,
+          "savings_pct": 92.10789210789211,
+          "quality_pct": 13.645454545454545
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1001,
+          "tokens_after": 821,
+          "savings_pct": 17.982017982017982,
+          "quality_pct": 91.06363636363636
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1001,
+          "tokens_after": 995,
+          "savings_pct": 0.5994005994005994,
+          "quality_pct": 92.46363636363635
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 92.10789210789211,
+      "best_quality_pct": 13.645454545454545
+    },
+    {
+      "path": "actionProperties.test.tsx",
+      "tokens": 1597,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1597,
+          "tokens_after": 310,
+          "savings_pct": 80.58860363180965,
+          "quality_pct": 16.350028785261944
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1597,
+          "tokens_after": 847,
+          "savings_pct": 46.963055729492794,
+          "quality_pct": 87.27115716753022
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1597,
+          "tokens_after": 1573,
+          "savings_pct": 1.5028177833437695,
+          "quality_pct": 90.84916522740356
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 80.58860363180965,
+      "best_quality_pct": 16.350028785261944
+    },
+    {
+      "path": "actionProperties.tsx",
+      "tokens": 13732,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 13732,
+          "tokens_after": 13732,
+          "savings_pct": 0.0,
+          "quality_pct": 92.61952191235059
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 13732,
+          "tokens_after": 8075,
+          "savings_pct": 41.19574715991844,
+          "quality_pct": 84.21569596288474
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 13732,
+          "tokens_after": 13035,
+          "savings_pct": 5.075735508301777,
+          "quality_pct": 75.79170264113259
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 41.19574715991844,
+      "best_quality_pct": 84.21569596288474
+    },
+    {
+      "path": "actionSelectAll.ts",
+      "tokens": 444,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 444,
+          "tokens_after": 99,
+          "savings_pct": 77.7027027027027,
+          "quality_pct": 20.247863247863247
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 444,
+          "tokens_after": 404,
+          "savings_pct": 9.00900900900901,
+          "quality_pct": 94.44444444444444
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 444,
+          "tokens_after": 437,
+          "savings_pct": 1.5765765765765765,
+          "quality_pct": 91.2136752136752
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 9.00900900900901,
+      "best_quality_pct": 94.44444444444444
+    },
+    {
+      "path": "actionStyles.ts",
+      "tokens": 1228,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1228,
+          "tokens_after": 121,
+          "savings_pct": 90.14657980456026,
+          "quality_pct": 17.29648991784914
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1228,
+          "tokens_after": 831,
+          "savings_pct": 32.328990228013026,
+          "quality_pct": 84.9085138162808
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1228,
+          "tokens_after": 1216,
+          "savings_pct": 0.9771986970684038,
+          "quality_pct": 92.08924570575056
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 90.14657980456026,
+      "best_quality_pct": 17.29648991784914
+    },
+    {
+      "path": "actionTextAutoResize.ts",
+      "tokens": 411,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 411,
+          "tokens_after": 99,
+          "savings_pct": 75.91240875912408,
+          "quality_pct": 25.102040816326532
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 411,
+          "tokens_after": 337,
+          "savings_pct": 18.004866180048662,
+          "quality_pct": 94.48979591836735
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 411,
+          "tokens_after": 411,
+          "savings_pct": 0.0,
+          "quality_pct": 94.48979591836735
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 18.004866180048662,
+      "best_quality_pct": 94.48979591836735
+    },
+    {
+      "path": "actionToggleSearchMenu.ts",
+      "tokens": 382,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 382,
+          "tokens_after": 42,
+          "savings_pct": 89.00523560209425,
+          "quality_pct": 13.807692307692307
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 382,
+          "tokens_after": 365,
+          "savings_pct": 4.450261780104712,
+          "quality_pct": 91.5
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 382,
+          "tokens_after": 382,
+          "savings_pct": 0.0,
+          "quality_pct": 93.65384615384616
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 89.00523560209425,
+      "best_quality_pct": 13.807692307692307
+    },
+    {
+      "path": "actionZindex.tsx",
+      "tokens": 1121,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1121,
+          "tokens_after": 1121,
+          "savings_pct": 0.0,
+          "quality_pct": 95.51020408163265
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1121,
+          "tokens_after": 826,
+          "savings_pct": 26.31578947368421,
+          "quality_pct": 93.61831218974076
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1121,
+          "tokens_after": 1121,
+          "savings_pct": 0.0,
+          "quality_pct": 95.51020408163265
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 26.31578947368421,
+      "best_quality_pct": 93.61831218974076
+    },
+    {
+      "path": "index.ts",
+      "tokens": 621,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 621,
+          "tokens_after": 621,
+          "savings_pct": 0.0,
+          "quality_pct": 100.0
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 621,
+          "tokens_after": 428,
+          "savings_pct": 31.07890499194847,
+          "quality_pct": 85.51724137931033
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 621,
+          "tokens_after": 621,
+          "savings_pct": 0.0,
+          "quality_pct": 100.0
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 31.07890499194847,
+      "best_quality_pct": 85.51724137931033
+    },
+    {
+      "path": "manager.tsx",
+      "tokens": 1215,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1215,
+          "tokens_after": 102,
+          "savings_pct": 91.60493827160494,
+          "quality_pct": 13.007826487288352
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1215,
+          "tokens_after": 862,
+          "savings_pct": 29.05349794238683,
+          "quality_pct": 89.52018006036113
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1215,
+          "tokens_after": 1198,
+          "savings_pct": 1.3991769547325104,
+          "quality_pct": 91.10593892270703
+        }
+      ],
+      "best_mode": "signatures",
+      "best_savings_pct": 91.60493827160494,
+      "best_quality_pct": 13.007826487288352
+    },
+    {
+      "path": "shortcuts.ts",
+      "tokens": 1209,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1209,
+          "tokens_after": 34,
+          "savings_pct": 97.18775847808105,
+          "quality_pct": 17.882821609016712
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1209,
+          "tokens_after": 417,
+          "savings_pct": 65.50868486352357,
+          "quality_pct": 86.85192382432957
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1209,
+          "tokens_after": 1197,
+          "savings_pct": 0.9925558312655087,
+          "quality_pct": 93.00427516517684
+        }
+      ],
+      "best_mode": "aggressive",
+      "best_savings_pct": 0.9925558312655087,
+      "best_quality_pct": 93.00427516517684
+    },
+    {
+      "path": "types.ts",
+      "tokens": 1430,
+      "modes": [
+        {
+          "mode": "signatures",
+          "tokens_before": 1430,
+          "tokens_after": 1430,
+          "savings_pct": 0.0,
+          "quality_pct": 98.72037914691943
+        },
+        {
+          "mode": "entropy",
+          "tokens_before": 1430,
+          "tokens_after": 1218,
+          "savings_pct": 14.825174825174825,
+          "quality_pct": 93.5004788448788
+        },
+        {
+          "mode": "aggressive",
+          "tokens_before": 1430,
+          "tokens_after": 1394,
+          "savings_pct": 2.5174825174825175,
+          "quality_pct": 95.81882474277434
+        }
+      ],
+      "best_mode": "entropy",
+      "best_savings_pct": 14.825174825174825,
+      "best_quality_pct": 93.5004788448788
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Cloned test codebases — the evaluator clones these himself (commands in USER_MANUAL.md
+# and README.md). They are large and have their own git history; do not commit them.
+/excalidraw/
+/fastapi/
+/full-stack-fastapi-template/
+
+# OS / scratch
+.DS_Store
+*.tmp
+
+VIDEO_SCRIPT.md
