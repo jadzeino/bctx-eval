@@ -195,6 +195,25 @@ verbose the command, the more it saves.
 > prefix any command with a throwaway home, e.g. `HOME=$(mktemp -d) bctx git log -n 150` — the
 > per-command `[bctx: …]` number is identical either way.
 
+**It's not just git — bctx compresses 111 tools.** See the full list and typical savings:
+
+```bash
+bctx patterns
+```
+
+The more verbose the output, the more it saves. Once you've run `yarn install` in this repo,
+these all route through bctx and show up in `bctx gain` too — try the noisy ones:
+
+```bash
+bctx yarn lint            # eslint across the repo
+bctx yarn test            # vitest run
+bctx eslint packages/     # or the linter directly
+bctx tsc --noEmit         # type-check output
+```
+
+A clean run is quiet (little to compress); a run with lots of warnings/failures compresses
+the most. `bctx gain` will list each tool separately — not just git.
+
 ### 4B — Source-file compression (one file)
 
 An agent that reads `textWrapping.ts` in full spends ~5,500 tokens. As a structural **outline**:
@@ -254,6 +273,18 @@ real; they're different trade-offs.**
 > ```bash
 > BCTX_BIN=$(command -v bctx) ~/Desktop/bctx-eval/PROOF_EXCALIDRAW/workflow_demo_ts.sh [path-to-excalidraw-repo]
 > ```
+
+> **Important — this saving does NOT show up in `bctx gain`.** There are **two sources** of
+> bctx savings:
+> 1. **Shell command output** (4A) — recorded in `bctx gain`.
+> 2. **Source-file reads** (4B/4C) — done by the agent through bctx's **MCP skills**
+>    (`blueprint`/`chisel`/`parallax`), which happen inside the agent's context and are **not**
+>    counted in `bctx gain`.
+>
+> So if you run an agent session and only check `bctx gain`, you'll see your shell commands but
+> **not** the (usually larger) source-read savings — you'd wrongly think the skills did nothing.
+> You measure those with `bctx read` / `bctx benchmark` (above), or by watching the agent call
+> `blueprint`/`chisel`/`parallax` instead of reading whole files. Keep both in mind.
 
 ### 4D — Whole-directory benchmark (nothing cherry-picked)
 

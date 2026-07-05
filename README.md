@@ -6,9 +6,12 @@ Every number here reproduces on your own machine with **bctx v0.1.31**.
 ## Start here
 1. **`TO_EVALUATOR.md`** — the 2-minute orientation (and why an earlier test showed only
    `git`, now fixed).
-2. **`USER_MANUAL.md`** — the guided walkthrough: install → verify → prove each saving → let
-   Claude Code do a real task → check `bctx gain`. Exact commands, exact expected output.
-3. **`COMMANDS_REFERENCE.md`** — the full capability catalog: every command, every lens mode,
+2. **`USER_MANUAL.md`** — the guided walkthrough (TypeScript / excalidraw): install → verify →
+   prove each saving → let Claude Code do a real task → check `bctx gain`. Exact commands,
+   exact expected output.
+3. **`USER_MANUAL_FASTAPI.md`** — the Python / FastAPI companion: `bctx gain` beyond git,
+   `bctx patterns`, and the source-read (MCP) savings that `bctx gain` does *not* show.
+4. **`COMMANDS_REFERENCE.md`** — the full capability catalog: every command, every lens mode,
    all 111 command compressors, all 41 agent skills, and how to extend/customize them.
 
 ## Install (any one — all deliver v0.1.31)
@@ -47,7 +50,8 @@ BCTX_BIN=$(command -v bctx) ./PROOF/validate.sh                      # Python/Fa
 ## What's here
 | Path | Contents |
 |---|---|
-| `USER_MANUAL.md` | Guided, testable walkthrough |
+| `USER_MANUAL.md` | Guided walkthrough (TypeScript / excalidraw) |
+| `USER_MANUAL_FASTAPI.md` | Guided walkthrough (Python / FastAPI) |
 | `COMMANDS_REFERENCE.md` | Full command/skill/extensibility reference |
 | `TO_EVALUATOR.md` | Orientation note |
 | `PROOF_EXCALIDRAW/` | TypeScript proof (scripts, results, benchmark JSON) |
