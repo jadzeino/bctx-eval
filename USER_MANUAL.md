@@ -55,16 +55,16 @@ brew tap better-ctx-org/bctx
 brew install better-ctx-org/bctx/bctx
 ```
 
-**Verify the version.** This is important — the numbers in this manual are for **v0.1.31**:
+**Verify the version.** This is important — the numbers in this manual are for **v0.1.32**:
 
 ```bash
 bctx --version
 ```
 
-Expected output (must say **0.1.31**):
+Expected output (must say **0.1.32**):
 
 ```
-bctx 0.1.31
+bctx 0.1.32
 ```
 
 > If it prints an older version, run `brew upgrade better-ctx-org/bctx/bctx` and check again.
@@ -525,7 +525,7 @@ agent's context, not the `gain` ledger.
 
 ## Part 7 — Every number, and how to reproduce it (auditor's map)
 
-All numbers are with **bctx 0.1.31** on **excalidraw @ 51ca8abde450e44f8f0db1b2708e0408915c7ab1**.
+All numbers are with **bctx 0.1.32** on **excalidraw @ 51ca8abde450e44f8f0db1b2708e0408915c7ab1**.
 
 | Claim | Reproduce with | Tolerance |
 |---|---|---|
@@ -551,7 +551,7 @@ high fidelity %; they are different modes.
 
 | Symptom | Fix |
 |---|---|
-| `brew tap` or `brew install` fails | Make sure you're online, run `brew update`, and retry. Confirm the formula resolves: `brew info better-ctx-org/bctx/bctx` should show `stable 0.1.31`. Fallback install (needs Node.js): `npm install -g bctx-bin` — also installs 0.1.31. |
+| `brew tap` or `brew install` fails | Make sure you're online, run `brew update`, and retry. Confirm the formula resolves: `brew info better-ctx-org/bctx/bctx` should show `stable 0.1.32`. Fallback install (needs Node.js): `npm install -g bctx-bin` — also installs 0.1.32. |
 | `bctx: command not found` after brew install | Run `brew --prefix`/`echo $PATH`; ensure `/opt/homebrew/bin` (Apple Silicon) or `/usr/local/bin` (Intel) is on PATH. Open a new Terminal window. |
 | `bctx --version` shows an old version | `brew upgrade better-ctx-org/bctx/bctx`, then re-check. |
 | `git checkout 51ca8ab…` says "did not match" | Your clone was too shallow. Re-clone with the exact Part 2 command (it uses `--filter=blob:none`, not `--depth 1`). |
@@ -559,7 +559,7 @@ high fidelity %; they are different modes.
 | `/mcp` shows no `bctx` server | You didn't restart Claude Code after `bctx init`. Fully quit and reopen it. Then `bctx doctor` should show `✓ Claude Code mcp.json`. |
 | `bctx search` prints "no results" | Run `bctx index` first (Part 4E). |
 | `bctx eslint`/`bctx vitest` shows no `[bctx: …]` line | Run `yarn install` first, and invoke the tool **directly** with `node_modules/.bin` on `PATH` (4A½/4A¾) — not via `bctx yarn …`, which uses the *yarn* compressor. A clean/green run also has little to compress. |
-| Numbers are slightly off | Confirm `bctx --version` = 0.1.31 **and** `git rev-parse HEAD` = the pinned commit. Both must match. Small ±1% drift on git diff / benchmark averages is expected (Part 7). |
+| Numbers are slightly off | Confirm `bctx --version` = 0.1.32 **and** `git rev-parse HEAD` = the pinned commit. Both must match. Small ±1% drift on git diff / benchmark averages is expected (Part 7). |
 | I don't want bctx touching my real data during a test | Prefix a command with an isolated home: `HOME=$(mktemp -d) bctx git log -n 150`. This writes to a throwaway folder, not your `~/.bctx`. |
 
 ---

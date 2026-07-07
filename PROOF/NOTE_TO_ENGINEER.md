@@ -42,7 +42,7 @@ on **excalidraw** (TypeScript), pinned to one commit so every number matches to 
 the new TypeScript proof is in `../PROOF_EXCALIDRAW/`. Same capabilities, same honest bands,
 two languages.
 
-**Install is real and public — v0.1.31 on all three paths** (verified): Homebrew
+**Install is real and public — v0.1.32 on all three paths** (verified): Homebrew
 (`brew tap better-ctx-org/bctx && brew install …`), `install.sh`, and `npm install -g
 bctx-bin`. The manual uses Homebrew (most robust for a non-expert on a Mac).
 

@@ -10,7 +10,7 @@ aimed at re-running the scenario you tried first — a FastAPI repo — and it d
    are **not** in `bctx gain` at all. You measure those a different way. (This applies to the
    TypeScript project too.)
 
-Everything is on **bctx v0.1.31**. Read every savings number with its **fidelity**.
+Everything is on **bctx v0.1.32**. Read every savings number with its **fidelity**.
 
 ---
 
@@ -19,7 +19,7 @@ Everything is on **bctx v0.1.31**. Read every savings number with its **fidelity
 If you haven't installed bctx yet, do Part 1 of `USER_MANUAL.md` (Homebrew / curl / npm), then:
 
 ```bash
-bctx --version        # must say: bctx 0.1.31
+bctx --version        # must say: bctx 0.1.32
 ```
 
 You'll also want a Python **virtual environment** ("venv") with a few dev tools. A venv is just a
@@ -221,7 +221,7 @@ full sediment → recall walkthrough.)
 
 ## Part 7 — Every number, how to reproduce it
 
-All on **bctx v0.1.31**, fixtures pinned in Part 2.
+All on **bctx v0.1.32**, fixtures pinned in Part 2.
 
 | Claim | Reproduce with | Tolerance |
 |---|---|---|

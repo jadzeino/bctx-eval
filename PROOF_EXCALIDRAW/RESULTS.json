@@ -1,11 +1,11 @@
 {
-  "summary": "bctx TypeScript evaluation on excalidraw — whole-product proof that bctx is not Python-specific. Numbers measured with bctx v0.1.31 on a pinned excalidraw checkout; honest fidelity labeling.",
-  "product_version": "bctx 0.1.31",
+  "summary": "bctx TypeScript evaluation on excalidraw — whole-product proof that bctx is not Python-specific. Numbers measured with bctx v0.1.32 on a pinned excalidraw checkout; honest fidelity labeling.",
+  "product_version": "bctx 0.1.32",
   "repo": "github.com/excalidraw/excalidraw",
   "pinned_commit": "51ca8abde450e44f8f0db1b2708e0408915c7ab1",
   "pinned_date": "2026-07-03",
   "clone_command": "git clone --filter=blob:none https://github.com/excalidraw/excalidraw.git && cd excalidraw && git checkout 51ca8abde450e44f8f0db1b2708e0408915c7ab1",
-  "measurement_note": "All numbers reproduce exactly at the pinned commit with bctx 0.1.31. Read every savings number WITH its fidelity. Fidelity = bctx identifier-coverage metric (how much of the original content survives). Token-weighted where aggregated.",
+  "measurement_note": "All numbers reproduce exactly at the pinned commit with bctx 0.1.32. Read every savings number WITH its fidelity. Fidelity = bctx identifier-coverage metric (how much of the original content survives). Token-weighted where aggregated.",
   "benchmark_whole_dir": {
     "packages/element/src": {
       "files_scanned": 47,
@@ -59,9 +59,9 @@
     "recall_returns": "[resonant] codebase/<key> (confidence: 95%) + value + tags"
   },
   "honest_headline": "Understanding an excalidraw feature (5 files as outlines) costs 97% fewer tokens (25217->844, lossy structural). High-fidelity entropy mode: ~34% fewer keeping ~89% content, consistent across dirs. Lossy signatures outline: ~63-76% token-weighted (~20-29% fidelity). Automatic git command compression: 98-99%. Same honest bands as the Python/FastAPI eval — bctx is not Python-specific.",
-  "install_paths_verified_v0_1_31": {
-    "homebrew": "brew tap better-ctx-org/bctx && brew install bctx -> 0.1.31",
-    "install_sh": "curl install.sh -> resolves latest -> 0.1.31",
-    "npm": "npm install -g bctx-bin -> 0.1.31 (published package correct; local repo package.json cosmetically stale at 0.1.22)"
+  "install_paths_verified_v0_1_32": {
+    "homebrew": "brew tap better-ctx-org/bctx && brew install bctx -> 0.1.32",
+    "install_sh": "curl install.sh -> resolves latest -> 0.1.32",
+    "npm": "npm install -g bctx-bin -> 0.1.32 (published package correct; local repo package.json cosmetically stale at 0.1.22)"
   }
 }

@@ -1,7 +1,7 @@
 # bctx — token-savings evaluation
 
 A reproducible evaluation of **bctx** (better-ctx), a context runtime for AI coding agents.
-Every number here reproduces on your own machine with **bctx v0.1.31**.
+Every number here reproduces on your own machine with **bctx v0.1.32**.
 
 ## Start here
 1. **`TO_EVALUATOR.md`** — the 2-minute orientation (and why an earlier test showed only
@@ -14,12 +14,12 @@ Every number here reproduces on your own machine with **bctx v0.1.31**.
 4. **`COMMANDS_REFERENCE.md`** — the full capability catalog: every command, every lens mode,
    all 111 command compressors, all 41 agent skills, and how to extend/customize them.
 
-## Install (any one — all deliver v0.1.31)
+## Install (any one — all deliver v0.1.32)
 ```bash
 brew tap better-ctx-org/bctx && brew install better-ctx-org/bctx/bctx   # recommended on Mac
 # or:  curl -fsSL https://betterctx.com/install.sh | sh
 # or:  npm install -g bctx-bin
-bctx --version   # must say: bctx 0.1.31
+bctx --version   # must say: bctx 0.1.32
 ```
 
 ## Get the test codebases

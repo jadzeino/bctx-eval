@@ -1,12 +1,12 @@
 {
-  "summary": "bctx whole-product investor evaluation. Two language proofs (Python/FastAPI + TypeScript/excalidraw) plus a wife-testable install->verify manual. Every number measured with bctx v0.1.31 and reproducible; fidelity honestly labeled.",
-  "product_version": "bctx 0.1.31",
+  "summary": "bctx whole-product investor evaluation. Two language proofs (Python/FastAPI + TypeScript/excalidraw) plus a wife-testable install->verify manual. Every number measured with bctx v0.1.32 and reproducible; fidelity honestly labeled.",
+  "product_version": "bctx 0.1.32",
   "primary_deliverable": "USER_MANUAL.md",
-  "install_paths_verified_v0_1_31": {
-    "homebrew": "brew tap better-ctx-org/bctx && brew install better-ctx-org/bctx/bctx -> 0.1.31 (verified: `brew info` reports stable 0.1.31)",
-    "install_sh": "curl install.sh -> resolves GitHub latest -> 0.1.31 (verified)",
-    "npm": "npm install -g bctx-bin -> 0.1.31 (verified: `npm view bctx-bin version` = 0.1.31; local repo packages/bctx-bin/package.json cosmetically stale at 0.1.22, published package correct)",
-    "note": "No release required; all public channels already serve 0.1.31."
+  "install_paths_verified_v0_1_32": {
+    "homebrew": "brew tap better-ctx-org/bctx && brew install better-ctx-org/bctx/bctx -> 0.1.32 (verified: homebrew-bctx Formula/bctx.rb pins version 0.1.32)",
+    "install_sh": "curl install.sh -> resolves GitHub latest -> 0.1.32 (verified: bctx-releases latest = v0.1.32)",
+    "npm": "npm install -g bctx-bin -> 0.1.32 (verified: `npm view bctx-bin version` = 0.1.32)",
+    "note": "Released v0.1.32 on 2026-07-07 (ClarityLens content-aware comment stripping fix); all public channels (GitHub/install.sh, Homebrew, npm) serve 0.1.32. Every eval number was re-verified identical on 0.1.32."
   },
   "whole_product_capabilities_proven": {
     "command_output_compression": "automatic shell-hook compression across 111 tool families; excalidraw git log -n150 = 98%, git diff HEAD~40 = 99%",

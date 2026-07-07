@@ -2,7 +2,7 @@
 
 Everything bctx exposes, what each piece does, and how to extend it. This is the "what does
 this tool actually support" companion to `USER_MANUAL.md` (which is the guided walkthrough).
-All of this is on **v0.1.31**.
+All of this is on **v0.1.32**.
 
 bctx saves an AI coding agent tokens in four ways, each covered below:
 1. **CLI commands** you run directly (Part A).

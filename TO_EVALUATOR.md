@@ -18,8 +18,8 @@ however i also run the tests and provided a quick guid to test from the point vi
 The fix ships in the latest release. Update, re-init, and repeat your original test:
 
 ```bash
-bctx update            # or reinstall (see below); gets you to v0.1.31
-bctx --version         # must say: bctx 0.1.31
+bctx update            # or reinstall (see below); gets you to v0.1.32
+bctx --version         # must say: bctx 0.1.32
 bctx init --agent claude   # re-installs the hook + the new "Golden Workflow" steering
 # restart Claude Code
 ```
@@ -31,7 +31,7 @@ Then do what you did before on your FastAPI repo. Two things changed:
   bctx's compressing readers and memory instead of reading whole files. That's the part that
   was idle before — it's where most of the savings are.
 
-**The one thing that matters: you must be on v0.1.31.** On older versions you'll see the old
+**The one thing that matters: you must be on v0.1.32.** On older versions you'll see the old
 behavior. `bctx --version` confirms it.
 
 ## Then: follow the manual (start here)
@@ -41,7 +41,7 @@ do a real task → check `bctx gain`. Every step has the exact command and the e
 output. It runs on **excalidraw** (TypeScript), pinned to one commit so your numbers match mine
 exactly. It's deliberately written so anyone can follow it, so please forgive the hand-holding.
 
-Install (any one — all three deliver v0.1.31; I tested each):
+Install (any one — all three deliver v0.1.32; I tested each):
 ```bash
 # Homebrew (recommended on a Mac)
 brew tap better-ctx-org/bctx && brew install better-ctx-org/bctx/bctx
