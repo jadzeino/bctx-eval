@@ -32,8 +32,10 @@ It is split into two tiers so the numbers are never conflated:
   (`git status` is rewritten to `bctx git status`, which routes through the domain compressors)
   and `bctx read --mode auto -- git ...`. Each git check runs on a deterministic multi-line state
   (two extra branches, a modified file, an untracked file), because a one-line output is too
-  small to be compressed at all and would pass whatever the compressors did. A loss here is a
-  real regression and fails the audit. *(Result: 0 losses; the
+  small to be compressed at all and would pass whatever the compressors did. `git log` in its
+  default format is compressed on purpose (emails and message bodies go), so for it the audit
+  checks the fact an agent needs instead: every commit subject, taken from
+  `git log --format=%s`. A loss here is a real regression and fails the audit. *(Result: 0 losses; the
   `auto` mode keeps 100% of symbols, declining to lossily compress arrow-function-heavy TS rather
   than drop names.)*
 - **Outline** — the opt-in `signatures` mode, a deliberately lossy structural outline (bodies

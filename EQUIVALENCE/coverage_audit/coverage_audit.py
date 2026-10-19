@@ -200,6 +200,25 @@ def strict_git_command(repo: Path, argv: list[str], label: str, path: str) -> di
     }
 
 
+def strict_git_log_subjects(repo: Path, label: str) -> dict:
+    """`git log` in its default format is compressed on purpose (emails and message bodies go),
+    so line coverage does not apply; what must survive is every commit's subject, the fact an
+    agent runs `git log` for. The oracle is git itself: `git log --format=%s`."""
+    promised = [s for s in run_off(["git", "log", "-n", "5", "--format=%s"], repo).splitlines() if s.strip()]
+    on = hook_form(["git", "log", "-n", "5"], repo)
+    missing = [s for s in promised if s not in on]
+    return {
+        "tier": "strict",
+        "kind": "git-log-subjects",
+        "target": f"{label}: git log -n 5 subjects [hook]",
+        "mode": "hook (bctx git log -n 5)",
+        "promised": len(promised),
+        "kept": len(promised) - len(missing),
+        "missing": missing,
+        "status": "EMPTY_OUTPUT" if not promised else "PASS" if not missing else "DATA_LOSS",
+    }
+
+
 @contextmanager
 def git_state(repo: Path):
     """A deterministic, multi-line git state: two extra branches, a modified tracked file and
@@ -385,6 +404,7 @@ def main() -> int:
             for argv, label in GIT_COMMANDS:
                 for path in ("hook", "read-auto"):
                     strict.append(strict_git_command(repo, argv, f"{name}: {label}", path))
+            strict.append(strict_git_log_subjects(repo, name))
 
     regression = check_regression_fixture()
 
@@ -415,6 +435,10 @@ def main() -> int:
     for r in strict:
         if r["status"] == "MISSING_TARGET":
             print(f"  [  MISSING] {r['target']}  ({r['hint']})")
+        elif r["kind"] == "git-log-subjects":
+            print(f"  [{r['status']:>9}] {r['target']}  subjects {r['kept']}/{r['promised']}")
+            if r["missing"]:
+                print(f"               MISSING: {r['missing']}")
         elif r["kind"] in ("python-auto", "ts-auto"):
             print(f"  [{r['status']:>9}] {r['target']}  symbols {r['kept']}/{r['promised']} ({r['coverage_pct']}%)")
             if r["missing"]:

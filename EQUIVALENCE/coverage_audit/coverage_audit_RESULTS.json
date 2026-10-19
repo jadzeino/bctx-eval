@@ -3,7 +3,7 @@
   "bctx_version": "bctx 0.1.33",
   "bctx_bin": "bctx",
   "claim": "in the modes an agent actually gets (auto + command output), every promised fact survives; the opt-in `signatures` outline is separately quantified",
-  "strict_checks": 19,
+  "strict_checks": 21,
   "strict_data_loss": 0,
   "regression_fixture": {
     "tier": "regression",
@@ -162,6 +162,16 @@
     },
     {
       "tier": "strict",
+      "kind": "git-log-subjects",
+      "target": "fastapi: git log -n 5 subjects [hook]",
+      "mode": "hook (bctx git log -n 5)",
+      "promised": 5,
+      "kept": 5,
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "tier": "strict",
       "kind": "git-command",
       "target": "excalidraw: git branch -a [hook]",
       "mode": "hook (bctx git branch -a)",
@@ -224,6 +234,16 @@
       "kept_lines": 5,
       "missing_lines": [],
       "announced_truncation": false,
+      "status": "PASS"
+    },
+    {
+      "tier": "strict",
+      "kind": "git-log-subjects",
+      "target": "excalidraw: git log -n 5 subjects [hook]",
+      "mode": "hook (bctx git log -n 5)",
+      "promised": 5,
+      "kept": 5,
+      "missing": [],
       "status": "PASS"
     }
   ],
