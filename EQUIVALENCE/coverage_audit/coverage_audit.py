@@ -65,7 +65,7 @@ def bctx_version() -> str:
 def read_mode(mode: str, argv: list[str], cwd: Path | None = None) -> str:
     """`bctx read --mode <mode> -- <argv>` -> compressed text."""
     cmd = [BCTX, "read", "--mode", mode, "--"] + argv
-    return subprocess.run(cmd, capture_output=True, text=True, timeout=180, env=BCTX_ENV, cwd=cwd).stdout
+    return subprocess.run(cmd, capture_output=True, text=True, timeout=180, env=BCTX_ENV, cwd=cwd or EVAL_ROOT).stdout
 
 
 def hook_form(argv: list[str], cwd: Path) -> str:
@@ -75,7 +75,21 @@ def hook_form(argv: list[str], cwd: Path) -> str:
 
 def read_default(path: Path) -> str:
     """`bctx read <file>` with no mode: what an agent gets when it reads a file through bctx."""
-    return subprocess.run([BCTX, "read", str(path)], capture_output=True, text=True, timeout=180, env=BCTX_ENV).stdout
+    return subprocess.run([BCTX, "read", str(path)], capture_output=True, text=True, timeout=180, env=BCTX_ENV, cwd=EVAL_ROOT).stdout
+
+
+def bypass_file() -> Path | None:
+    """bctx passes output through untouched when a `.bctx-bypass` file sits in its working
+    directory or any parent (BCTX_BYPASS is already removed from BCTX_ENV). Every bctx call
+    here runs inside EVAL_ROOT, so one such file would make each check compare raw output
+    with raw output and pass whatever the compressors do."""
+    for d in [EVAL_ROOT.resolve(), *EVAL_ROOT.resolve().parents]:
+        if (d / ".bctx-bypass").exists():
+            return d / ".bctx-bypass"
+    for name in GIT_REPOS:
+        if (EVAL_ROOT / name / ".bctx-bypass").exists():
+            return EVAL_ROOT / name / ".bctx-bypass"
+    return None
 
 
 def run_off(argv: list[str], cwd: Path | None = None) -> str:
@@ -339,6 +353,13 @@ def missing_target(rel: str, kind: str) -> dict:
 
 
 def main() -> int:
+    blocker = bypass_file()
+    if blocker is not None:
+        print(f"REFUSED: {blocker} turns bctx compression off for everything under it, so every")
+        print("check would compare raw output with raw output. Run the audit from a folder")
+        print("outside it (in better-ctx CI: copy bctx-eval to $RUNNER_TEMP first).")
+        return 1
+
     strict, outline = [], []
 
     for rel in PYTHON_TARGETS:

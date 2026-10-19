@@ -50,7 +50,11 @@ the audit catches it — the exact data loss that fidelity missed.
 *Correction, 2026-10-19:* the first published version checked command output only through
 `bctx read --mode auto`, on one-line outputs. A deliberate mutation that made the hook path drop
 `git status`'s `## main` line passed it. The audit now checks the hook path on multi-line state,
-and the same mutation fails it (`DATA_LOSS: ['## main']`).
+and the same mutation fails it (`DATA_LOSS: ['## main']`). A second hole showed up when the gate
+first ran in better-ctx CI: the corpora sat inside the better-ctx checkout, whose `.bctx-bypass`
+file turns compression off for everything below it, so every check compared raw output with raw
+output. The audit now refuses to run under a bypass file, and CI runs it from outside the
+checkout.
 
 Run it: `cd coverage_audit && ./fetch_corpora.sh && BCTX_BIN=<bctx> ./run_coverage_audit.sh` →
 `coverage_audit_RESULTS.json`. `fetch_corpora.sh` clones FastAPI and Excalidraw at the pinned commits
