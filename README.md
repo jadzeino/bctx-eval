@@ -47,6 +47,27 @@ BCTX_BIN=$(command -v bctx) ./PROOF_EXCALIDRAW/workflow_demo_ts.sh   # TS featur
 BCTX_BIN=$(command -v bctx) ./PROOF/validate.sh                      # Python/FastAPI
 ```
 
+## Equivalence — "same AI results, no data loss"
+The proofs above show bctx **saves tokens** at a stated **fidelity**. Fidelity is a proxy for
+content survival, not proof the agent's *answer* is unchanged. `EQUIVALENCE/` closes that gap and
+answers the question directly — *is the AI's result the same with compression ON vs OFF?* — in
+three layers:
+1. **Coverage audit** (deterministic, no model, free) — independently checks that every fact a
+   mode promises to keep survives; catches data loss at the source, including the historical
+   `git branch` bug that fidelity missed.
+2. **Task-outcome A/B** — the same tasks answered from compressed (ON) vs full (OFF) context,
+   scored by code oracles + a blind judge. Result on this set: **success rate 1.0 ON = 1.0 OFF,
+   zero divergences**, at up to 93% fewer tokens.
+3. **Honest framing** — the claim is *no drop in success rate + no dropped facts*, not
+   byte-identical outputs (LLMs are stochastic).
+
+```bash
+# Layer 1 is free (no model) and runs in seconds:
+./EQUIVALENCE/coverage_audit/fetch_corpora.sh      # skip if you cloned the corpora above
+BCTX_BIN=$(command -v bctx) ./EQUIVALENCE/coverage_audit/run_coverage_audit.sh
+```
+See [`EQUIVALENCE/METHODOLOGY.md`](EQUIVALENCE/METHODOLOGY.md) for the full method and results.
+
 ## What's here
 | Path | Contents |
 |---|---|
@@ -54,6 +75,7 @@ BCTX_BIN=$(command -v bctx) ./PROOF/validate.sh                      # Python/Fa
 | `USER_MANUAL_FASTAPI.md` | Guided walkthrough (Python / FastAPI) |
 | `COMMANDS_REFERENCE.md` | Full command/skill/extensibility reference |
 | `TO_EVALUATOR.md` | Orientation note |
+| `EQUIVALENCE/` | Quality/equivalence eval: same AI results, no data loss (3 layers) |
 | `PROOF_EXCALIDRAW/` | TypeScript proof (scripts, results, benchmark JSON) |
 | `PROOF/` | Python/FastAPI proof |
 | `RESULTS.json` | Machine-readable summary of both |

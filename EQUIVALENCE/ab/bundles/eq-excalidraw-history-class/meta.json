@@ -1,0 +1,9 @@
+{
+  "id": "eq-excalidraw-history-class",
+  "repo": "excalidraw",
+  "kind": "deterministic",
+  "on_mode": "signatures",
+  "off_bytes": 6836,
+  "on_bytes": 472,
+  "pct_smaller": 93
+}

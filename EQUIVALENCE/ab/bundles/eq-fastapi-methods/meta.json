@@ -1,0 +1,9 @@
+{
+  "id": "eq-fastapi-methods",
+  "repo": "fastapi",
+  "kind": "deterministic",
+  "on_mode": "entropy",
+  "off_bytes": 253187,
+  "on_bytes": 163167,
+  "pct_smaller": 36
+}

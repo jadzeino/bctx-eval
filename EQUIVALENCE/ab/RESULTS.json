@@ -1,0 +1,86 @@
+{
+  "layer": "2 - task-outcome A/B (controlled-context subagents)",
+  "claim": "no measurable drop in success rate + no dropped facts (NOT byte-identical outputs)",
+  "bctx_version": "bctx 0.1.32",
+  "model": "controlled-context subagents (Claude), context = compressed ON vs full OFF, identical prompt",
+  "reps_per_condition": 3,
+  "aggregate": {
+    "deterministic_tasks": 4,
+    "freeform_tasks": 1,
+    "deterministic_on_success_rate": 1.0,
+    "deterministic_off_success_rate": 1.0,
+    "freeform_blind_judge_equivalence_rate": 1.0,
+    "divergences": []
+  },
+  "verdict": "EQUIVALENT — compression ON matched full-context OFF on every task; success rate unchanged (1.0 vs 1.0), and the blind judge found all free-form pairs substantively equivalent.",
+  "honest_notes": [
+    "Outputs are NOT byte-identical, and are not expected to be: e.g. on eq-excalidraw-history-class the ON runs named methods 'undo, redo' while OFF named 'record, undo' — both correct, both pass the checker. This is stochastic wording, not data loss; it is exactly why the claim is stated as success-rate + no-dropped-facts, not identical text.",
+    "eq-git-branch compresses 0% (auto returns the 4-line branch listing verbatim). Its value is the bug-class check: with compression ON the current-branch marker '* master' survives, so the agent still names the branch (the exact fact the historical ClarityLens bug dropped).",
+    "Compression actually applied per task is recorded below and in each bundles/<id>/meta.json; the strongest compressions here (signatures 93%, entropy 54%) produced identical success rates to full context."
+  ],
+  "tasks": [
+    {
+      "id": "eq-fastapi-query",
+      "kind": "deterministic",
+      "on_mode": "entropy",
+      "pct_smaller": 54,
+      "checker": "answer contains 'Query'",
+      "on_success_rate": 1.0,
+      "off_success_rate": 1.0,
+      "on_answers": ["Query", "Query", "Query"],
+      "off_answers": ["Query", "Query", "Query"],
+      "equivalent": true
+    },
+    {
+      "id": "eq-fastapi-methods",
+      "kind": "deterministic",
+      "on_mode": "entropy",
+      "pct_smaller": 36,
+      "checker": "answer contains all of get/post/put/delete",
+      "on_success_rate": 1.0,
+      "off_success_rate": 1.0,
+      "on_answers": ["get post put delete patch head options trace", "get post put delete patch head options trace", "get post put delete options head patch trace"],
+      "off_answers": ["get post put delete patch head options trace", "get post put delete options head patch trace", "get post put delete patch head options trace"],
+      "equivalent": true
+    },
+    {
+      "id": "eq-git-branch",
+      "kind": "deterministic",
+      "on_mode": "auto",
+      "pct_smaller": 0,
+      "checker": "answer contains 'master' (current-branch marker must survive)",
+      "on_success_rate": 1.0,
+      "off_success_rate": 1.0,
+      "on_answers": ["master", "master", "master"],
+      "off_answers": ["master", "master", "master"],
+      "equivalent": true
+    },
+    {
+      "id": "eq-excalidraw-history-class",
+      "kind": "deterministic",
+      "on_mode": "signatures",
+      "pct_smaller": 93,
+      "checker": "answer contains 'History' + >=2 of record/undo/redo/clear",
+      "on_success_rate": 1.0,
+      "off_success_rate": 1.0,
+      "on_answers": ["History, undo, redo", "History, undo, redo", "History; undo; redo"],
+      "off_answers": ["History, record, undo", "History, record, undo", "History: record, undo"],
+      "equivalent": true,
+      "note": "ON and OFF named different (both-valid) method pairs — equivalent, not identical."
+    },
+    {
+      "id": "eq-excalidraw-history-summary",
+      "kind": "freeform",
+      "on_mode": "entropy",
+      "pct_smaller": 25,
+      "checker": "blind LLM judge: substantively equivalent y/n over 3 pairs",
+      "blind_judge_equivalence_rate": 1.0,
+      "equivalent": true,
+      "judge_reasons": [
+        "Same module: HistoryDelta + History managing undo/redo stacks, recording incremental state changes, skipping empty/invisible changes.",
+        "Same undo/redo module; History (stacks, records deltas) + HistoryDelta (applies/inverts, excludes version props); minor emphasis differences only.",
+        "Same undo/redo system managing HistoryDelta + stacks + emitting events; extra details are non-conflicting elaborations."
+      ]
+    }
+  ]
+}

@@ -89,6 +89,35 @@ One thing I'm explicitly *not* claiming: code search isn't a token win over `gre
 narrow string — its value is relevance/ranking. It's framed that way in the docs. I'd rather
 under-claim than have you catch me over-claiming.
 
+## "But is the AI's answer the same with compression on?" — see `EQUIVALENCE/`
+
+Fair question, and the most important one. Token savings + fidelity show how much *content*
+survives; they don't prove the agent reaches the *same result*. (The `git branch` data loss you'd
+have caught is exactly why — fidelity scored it fine, yet a real fact was gone.) So I added
+`EQUIVALENCE/`, which measures outcome-equivalence directly, in three layers:
+
+1. **Coverage audit** — deterministic, no model, runs in seconds and costs nothing. It derives
+   the facts each mode *promises* to keep independently of bctx (Python `ast`, a TS export regex,
+   raw git lines) and asserts each survives. It ships with a regression fixture that replays your
+   `* main` bug and confirms the audit catches it. Run it yourself:
+   ```bash
+   ./EQUIVALENCE/coverage_audit/fetch_corpora.sh   # pinned FastAPI + Excalidraw, if not cloned yet
+   BCTX_BIN=$(command -v bctx) ./EQUIVALENCE/coverage_audit/run_coverage_audit.sh
+   ```
+   Result: **0 data-loss findings** in the modes an agent actually uses (default `auto` + command
+   output). The opt-in `signatures` outline is lossy by design — I quantify exactly where (it
+   drops TS arrow-function names) rather than hide it.
+2. **Task-outcome A/B** — the same tasks answered from compressed (ON) vs full (OFF) context,
+   scored by code oracles + a blind judge, 3 runs each. Result on this set: **success rate 1.0 ON
+   = 1.0 OFF, zero divergences**, at up to 93% fewer tokens. The context bundles are committed so
+   you can diff ON vs OFF and see exactly what changed.
+3. **Honest framing** — I claim *no drop in success rate + no dropped facts*, **not** identical
+   text (LLMs are stochastic; on one task ON said "undo, redo" and OFF said "record, undo" — both
+   right). Any divergence would be in `EQUIVALENCE/ab/RESULTS.json` verbatim. There are none on
+   this set, but the honesty rule stands.
+
+Start at [`EQUIVALENCE/METHODOLOGY.md`](EQUIVALENCE/METHODOLOGY.md).
+
 Everything is pinned to a version and a commit, with a reproduce command for every figure.
 Happy to walk through it live whenever suits you.
 

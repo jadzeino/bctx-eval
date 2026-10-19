@@ -1,0 +1,55 @@
+{
+  "about": "Layer 2 - task-outcome A/B. Each task is answered twice from the SAME prompt: once with bctx-COMPRESSED context (ON) and once with FULL raw context (OFF). Deterministic tasks are scored by a code oracle (substring match); the free-form task is scored by a blind LLM judge shown both answers unlabeled. The claim under test is outcome-equivalence: no drop in success rate + no dropped facts. Compression ratios are measured per task by build_bundles.py and recorded in bundles/<id>/meta.json.",
+  "conditions": {
+    "ON": "context = `bctx read --mode <on_mode>` output (compressed)",
+    "OFF": "context = raw file / `BCTX_BYPASS=1` command output (full)"
+  },
+  "reps_per_condition": 3,
+  "tasks": [
+    {
+      "id": "eq-fastapi-query",
+      "repo": "fastapi",
+      "kind": "deterministic",
+      "prompt": "Using only the context below, what is the exact name of the function that constructs a query parameter for a FastAPI path operation? Answer with just the function name.",
+      "context": { "type": "file", "path": "fastapi/fastapi/param_functions.py", "on_mode": "entropy" },
+      "checker": { "type": "contains_all", "expected": ["Query"] },
+      "note": "entropy mode ~54% smaller; the answer token survives compression."
+    },
+    {
+      "id": "eq-fastapi-methods",
+      "repo": "fastapi",
+      "kind": "deterministic",
+      "prompt": "Using only the context below, list the HTTP method decorators that APIRouter provides (e.g. get, post, ...). List every one you can find.",
+      "context": { "type": "file", "path": "fastapi/fastapi/routing.py", "on_mode": "entropy" },
+      "checker": { "type": "contains_all", "expected": ["get", "post", "put", "delete"] },
+      "note": "entropy mode ~36% smaller; tests that no method is dropped by compression."
+    },
+    {
+      "id": "eq-git-branch",
+      "repo": "fastapi",
+      "kind": "deterministic",
+      "prompt": "Using only the context below (the output of `git branch -a`), which branch is currently checked out? Answer with just the branch name.",
+      "context": { "type": "command", "argv": ["git", "-C", "{fastapi}", "branch", "-a"], "on_mode": "auto" },
+      "checker": { "type": "contains_all", "expected": ["master"] },
+      "note": "Exact class of the historical ClarityLens bug (dropped `* main`). With compression ON the current-branch marker must survive so the agent still identifies the branch."
+    },
+    {
+      "id": "eq-excalidraw-history-class",
+      "repo": "excalidraw",
+      "kind": "deterministic",
+      "prompt": "Using only the context below, which class is responsible for recording undo/redo history, and name two of its methods? Answer with the class name followed by two method names.",
+      "context": { "type": "file", "path": "excalidraw/packages/excalidraw/history.ts", "on_mode": "signatures" },
+      "checker": { "type": "contains_all_groups", "expected_groups": [["History"], ["record", "undo", "redo", "clear"]], "min_from_second_group": 2 },
+      "note": "signatures outline ~93% smaller; a lossy mode where the class + methods still survive for this file."
+    },
+    {
+      "id": "eq-excalidraw-history-summary",
+      "repo": "excalidraw",
+      "kind": "freeform",
+      "prompt": "Using only the context below, summarize in 2-3 sentences what this module does and the main capability it provides.",
+      "context": { "type": "file", "path": "excalidraw/packages/excalidraw/history.ts", "on_mode": "entropy" },
+      "checker": { "type": "blind_judge" },
+      "note": "entropy mode ~25% smaller; free-form answer compared ON vs OFF by a blind judge for substantive equivalence."
+    }
+  ]
+}

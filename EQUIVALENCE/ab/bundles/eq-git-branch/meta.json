@@ -1,0 +1,9 @@
+{
+  "id": "eq-git-branch",
+  "repo": "fastapi",
+  "kind": "deterministic",
+  "on_mode": "auto",
+  "off_bytes": 72,
+  "on_bytes": 72,
+  "pct_smaller": 0
+}

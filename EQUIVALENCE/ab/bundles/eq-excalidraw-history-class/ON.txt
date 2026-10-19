@@ -1,0 +1,19 @@
+// import: @excalidraw/common
+// import: @excalidraw/element
+
+fn applyTo; // line 19
+fn calculate; // line 51
+fn inverse; // line 61
+fn applyLatestChanges; // line 68
+fn constructor; // line 84
+fn clear; // line 108
+fn record; // line 115
+fn undo; // line 31
+fn redo; // line 31
+fn perform; // line 140
+fn push; // line 125
+fn pop; // line 143
+fn push; // line 125
+pub class HistoryDelta; // line 15
+pub class HistoryChangedEvent; // line 83
+pub class History; // line 90

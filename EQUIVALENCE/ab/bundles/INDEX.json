@@ -1,0 +1,50 @@
+{
+  "bctx": "bctx",
+  "bundles": [
+    {
+      "id": "eq-fastapi-query",
+      "repo": "fastapi",
+      "kind": "deterministic",
+      "on_mode": "entropy",
+      "off_bytes": 69596,
+      "on_bytes": 32117,
+      "pct_smaller": 54
+    },
+    {
+      "id": "eq-fastapi-methods",
+      "repo": "fastapi",
+      "kind": "deterministic",
+      "on_mode": "entropy",
+      "off_bytes": 253187,
+      "on_bytes": 163167,
+      "pct_smaller": 36
+    },
+    {
+      "id": "eq-git-branch",
+      "repo": "fastapi",
+      "kind": "deterministic",
+      "on_mode": "auto",
+      "off_bytes": 72,
+      "on_bytes": 72,
+      "pct_smaller": 0
+    },
+    {
+      "id": "eq-excalidraw-history-class",
+      "repo": "excalidraw",
+      "kind": "deterministic",
+      "on_mode": "signatures",
+      "off_bytes": 6836,
+      "on_bytes": 472,
+      "pct_smaller": 93
+    },
+    {
+      "id": "eq-excalidraw-history-summary",
+      "repo": "excalidraw",
+      "kind": "freeform",
+      "on_mode": "entropy",
+      "off_bytes": 6836,
+      "on_bytes": 5107,
+      "pct_smaller": 25
+    }
+  ]
+}
