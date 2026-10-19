@@ -28,7 +28,12 @@ involved, so it reproduces byte-for-byte on any machine.
 It is split into two tiers so the numbers are never conflated:
 
 - **Strict** — the modes an agent actually gets: the default `auto` mode on source files, and raw
-  command output. A loss here is a real regression and fails the audit. *(Result: 0 losses; the
+  command output as it reaches the agent. Command output is checked on both paths: the shell hook
+  (`git status` is rewritten to `bctx git status`, which routes through the domain compressors)
+  and `bctx read --mode auto -- git ...`. Each git check runs on a deterministic multi-line state
+  (two extra branches, a modified file, an untracked file), because a one-line output is too
+  small to be compressed at all and would pass whatever the compressors did. A loss here is a
+  real regression and fails the audit. *(Result: 0 losses; the
   `auto` mode keeps 100% of symbols, declining to lossily compress arrow-function-heavy TS rather
   than drop names.)*
 - **Outline** — the opt-in `signatures` mode, a deliberately lossy structural outline (bodies
@@ -36,10 +41,16 @@ It is split into two tiers so the numbers are never conflated:
   For Python it keeps 100% of def/class names; for TypeScript it keeps `function`-keyword defs and
   class methods but does **not** parse `export const NAME = () => …` arrow exports as named
   definitions, so it drops those names. We report that in full rather than hide it — and note that
-  the default `auto` mode keeps them.
+  the default `auto` mode keeps them. `bctx read <file>` without `--mode` resolves to this outline
+  for files, so it is reported here too, as what an agent reading a file through bctx receives.
 
 A **regression fixture** replays the historical `* main` bug through the same logic and confirms
 the audit catches it — the exact data loss that fidelity missed.
+
+*Correction, 2026-10-19:* the first published version checked command output only through
+`bctx read --mode auto`, on one-line outputs. A deliberate mutation that made the hook path drop
+`git status`'s `## main` line passed it. The audit now checks the hook path on multi-line state,
+and the same mutation fails it (`DATA_LOSS: ['## main']`).
 
 Run it: `cd coverage_audit && ./fetch_corpora.sh && BCTX_BIN=<bctx> ./run_coverage_audit.sh` →
 `coverage_audit_RESULTS.json`. `fetch_corpora.sh` clones FastAPI and Excalidraw at the pinned commits

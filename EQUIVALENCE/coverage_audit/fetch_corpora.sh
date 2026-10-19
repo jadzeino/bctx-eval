@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # fetch_corpora.sh — clone the two audited codebases at the commits this audit is pinned to.
 #
-# Each is a shallow fetch of one commit, checked out as a branch named `main`, so `git branch`
-# prints a `* main` line: the exact line the historical ClarityLens bug dropped. A clone that
+# Each is a shallow fetch (20 commits, so `git log -n5` has five lines) checked out as a branch
+# named `main`, so `git branch` prints a `* main` line: the exact line the historical ClarityLens
+# bug dropped. A clone that
 # already exists is accepted only at its pinned commit; anything else is an error, because the
 # audit's numbers are only comparable on the same sources.
 #
@@ -24,7 +25,7 @@ fetch() {
   fi
   git init -q "$dir"
   git -C "$dir" remote add origin "$url"
-  git -C "$dir" fetch -q --depth 1 origin "$sha"
+  git -C "$dir" fetch -q --depth 20 origin "$sha"
   git -C "$dir" -c advice.detachedHead=false checkout -q -B main FETCH_HEAD
   echo "$name: fetched ${sha:0:12}"
 }

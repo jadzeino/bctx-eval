@@ -29,17 +29,27 @@ finds unexplained data loss, a target is missing (run ./fetch_corpora.sh), a com
 nothing to check, or the regression fixture stops catching the known bug.
 """
 
+from __future__ import annotations
+
 import ast
 import json
 import os
 import re
 import subprocess
 import sys
+import tempfile
+from contextlib import contextmanager
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 EVAL_ROOT = HERE.parent.parent  # ~/Desktop/bctx-eval
 BCTX = os.environ.get("BCTX_BIN", "bctx")
+# bctx records executions and may sync them; the audit must touch neither the user's
+# stats nor the cloud, so every bctx call gets a throwaway home and a closed-port endpoint.
+SANDBOX_HOME = tempfile.mkdtemp(prefix="bctx-audit-home-")
+BCTX_ENV = {
+    k: v for k, v in os.environ.items() if k != "BCTX_BYPASS"
+} | {"HOME": SANDBOX_HOME, "BCTX_ENDPOINT": "http://127.0.0.1:9", "BCTX_CLOUD_ENDPOINT": "http://127.0.0.1:9"}
 
 # ------------------------------------------------------------------ helpers
 
@@ -52,16 +62,26 @@ def bctx_version() -> str:
         return f"unknown ({e})"
 
 
-def read_mode(mode: str, argv: list[str]) -> str:
+def read_mode(mode: str, argv: list[str], cwd: Path | None = None) -> str:
     """`bctx read --mode <mode> -- <argv>` -> compressed text."""
     cmd = [BCTX, "read", "--mode", mode, "--"] + argv
-    return subprocess.run(cmd, capture_output=True, text=True, timeout=180).stdout
+    return subprocess.run(cmd, capture_output=True, text=True, timeout=180, env=BCTX_ENV, cwd=cwd).stdout
 
 
-def run_off(argv: list[str]) -> str:
+def hook_form(argv: list[str], cwd: Path) -> str:
+    """What an agent gets: the shell hook rewrites `git status` to `bctx git status`."""
+    return subprocess.run([BCTX] + argv, capture_output=True, text=True, timeout=180, env=BCTX_ENV, cwd=cwd).stdout
+
+
+def read_default(path: Path) -> str:
+    """`bctx read <file>` with no mode: what an agent gets when it reads a file through bctx."""
+    return subprocess.run([BCTX, "read", str(path)], capture_output=True, text=True, timeout=180, env=BCTX_ENV).stdout
+
+
+def run_off(argv: list[str], cwd: Path | None = None) -> str:
     """Raw command output with bctx fully bypassed (the ground truth)."""
     env = dict(os.environ, BCTX_BYPASS="1")
-    return subprocess.run(argv, capture_output=True, text=True, timeout=180, env=env).stdout
+    return subprocess.run(argv, capture_output=True, text=True, timeout=180, env=env, cwd=cwd).stdout
 
 
 # ------------------------------------------------------------------ oracles
@@ -138,15 +158,16 @@ def strict_ts_auto(rel: str) -> dict:
 # ------------------------------------------------ STRICT: git command output
 
 
-def strict_git_command(argv: list[str], label: str) -> dict:
+def strict_git_command(repo: Path, argv: list[str], label: str, path: str) -> dict:
     """Every non-blank line of the raw output must survive in the compressed output.
 
     git listing/status output is meant to be preserved verbatim (no lossy compression),
-    so a missing line is real data loss. Announced truncation ("... N more") is detected
-    and reported as by-design rather than counted as loss.
+    so a missing line is real data loss. `path` is how the output reaches the agent:
+    "hook" (`bctx git ...`, the form the shell hook rewrites every git command to) or
+    "read-auto" (`bctx read --mode auto -- git ...`).
     """
-    off = run_off(argv)
-    on = read_mode("auto", argv)
+    off = run_off(argv, repo)
+    on = hook_form(argv, repo) if path == "hook" else read_mode("auto", argv, repo)
     off_lines = [ln.rstrip() for ln in off.splitlines() if ln.strip()]
     on_lines = [ln.rstrip() for ln in on.splitlines()]
     announced_trunc = bool(re.search(r"\.\.\.|\bmore\b", on))
@@ -154,8 +175,8 @@ def strict_git_command(argv: list[str], label: str) -> dict:
     return {
         "tier": "strict",
         "kind": "git-command",
-        "target": label,
-        "mode": "auto",
+        "target": f"{label} [{path}]",
+        "mode": "hook (bctx " + " ".join(argv) + ")" if path == "hook" else "auto",
         "promised_lines": len(off_lines),
         "kept_lines": len(off_lines) - len(missing),
         "missing_lines": missing,
@@ -163,6 +184,26 @@ def strict_git_command(argv: list[str], label: str) -> dict:
         # An empty raw output would make every line "kept": a vacuous pass, not a check.
         "status": "EMPTY_OUTPUT" if not off_lines else "PASS" if not missing else "DATA_LOSS",
     }
+
+
+@contextmanager
+def git_state(repo: Path):
+    """A deterministic, multi-line git state: two extra branches, a modified tracked file and
+    an untracked file. One-line outputs (a fresh clone's `* main`) are too small for bctx to
+    compress at all, so they would pass whatever the compressors do. Restored afterwards."""
+    git = ["git", "-C", str(repo)]
+    for branch in ("eval/feature-a", "eval/feature-b"):
+        subprocess.run(git + ["branch", "-f", branch, "HEAD"], check=True, capture_output=True)
+    readme = repo / "README.md"
+    original = readme.read_bytes()
+    untracked = repo / "EQUIVALENCE_AUDIT_UNTRACKED.txt"
+    readme.write_bytes(original + b"\nequivalence audit edit\n")
+    untracked.write_text("untracked file for the equivalence audit\n")
+    try:
+        yield
+    finally:
+        readme.write_bytes(original)
+        untracked.unlink(missing_ok=True)
 
 
 # ------------------------------------------------ OUTLINE: signatures mode
@@ -218,6 +259,30 @@ def outline_ts_signatures(rel: str) -> dict:
     }
 
 
+def outline_read_default(rel: str) -> dict:
+    """`bctx read <file>` without --mode resolves to the `signatures` outline for files.
+    Reported here, never gating, so the default an agent actually receives is on the record."""
+    path = EVAL_ROOT / rel
+    if rel.endswith(".py"):
+        promised = python_symbols(path)
+    else:
+        fns, types = ts_symbols(path)
+        promised = fns + types
+    out = read_default(path)
+    missing = [n for n in promised if not present(n, out)]
+    return {
+        "tier": "outline",
+        "kind": "read-default",
+        "target": rel,
+        "mode": "bctx read <file> (default)",
+        "promised": len(promised),
+        "kept": len(promised) - len(missing),
+        "coverage_pct": round(100 * (len(promised) - len(missing)) / max(1, len(promised)), 1),
+        "missing": missing,
+        "status": "FULL_OUTLINE" if not missing else "LOSSY_OUTLINE",
+    }
+
+
 # ------------------------------------------------ regression fixture
 
 
@@ -254,13 +319,12 @@ TS_TARGETS = [
     "excalidraw/packages/common/src/utils.ts",
 ]
 
-GIT_CHECKS = [
-    (["git", "-C", str(EVAL_ROOT / "fastapi"), "branch", "-a"], "fastapi: git branch -a"),
-    (["git", "-C", str(EVAL_ROOT / "fastapi"), "status", "-sb"], "fastapi: git status -sb"),
-    (["git", "-C", str(EVAL_ROOT / "fastapi"), "log", "-n", "5", "--oneline"], "fastapi: git log -n5 --oneline"),
-    (["git", "-C", str(EVAL_ROOT / "excalidraw"), "branch", "-a"], "excalidraw: git branch -a"),
-    (["git", "-C", str(EVAL_ROOT / "excalidraw"), "status", "-sb"], "excalidraw: git status -sb"),
+GIT_COMMANDS = [
+    (["git", "branch", "-a"], "git branch -a"),
+    (["git", "status", "-sb"], "git status -sb"),
+    (["git", "log", "-n", "5", "--oneline"], "git log -n5 --oneline"),
 ]
+GIT_REPOS = ["fastapi", "excalidraw"]
 
 
 def missing_target(rel: str, kind: str) -> dict:
@@ -281,19 +345,25 @@ def main() -> int:
         if (EVAL_ROOT / rel).exists():
             strict.append(strict_python_auto(rel))
             outline.append(outline_python_signatures(rel))
+            outline.append(outline_read_default(rel))
         else:
             strict.append(missing_target(rel, "python-auto"))
     for rel in TS_TARGETS:
         if (EVAL_ROOT / rel).exists():
             strict.append(strict_ts_auto(rel))
             outline.append(outline_ts_signatures(rel))
+            outline.append(outline_read_default(rel))
         else:
             strict.append(missing_target(rel, "ts-auto"))
-    for argv, label in GIT_CHECKS:
-        if (Path(argv[2]) / ".git").exists():
-            strict.append(strict_git_command(argv, label))
-        else:
-            strict.append(missing_target(label, "git-command"))
+    for name in GIT_REPOS:
+        repo = EVAL_ROOT / name
+        if not (repo / ".git").exists():
+            strict.append(missing_target(name + ": git", "git-command"))
+            continue
+        with git_state(repo):
+            for argv, label in GIT_COMMANDS:
+                for path in ("hook", "read-auto"):
+                    strict.append(strict_git_command(repo, argv, f"{name}: {label}", path))
 
     regression = check_regression_fixture()
 
@@ -338,8 +408,9 @@ def main() -> int:
     print("OUTLINE — opt-in `signatures` mode (labeled lossy, ~20% fidelity; NOT the headline):")
     print("-" * 70)
     for r in outline:
-        if r["kind"] == "python-signatures":
-            print(f"  [{r['status']:>12}] {r['target']}  {r['kept']}/{r['promised']} ({r['coverage_pct']}%)")
+        if r["kind"] in ("python-signatures", "read-default"):
+            label = "bctx read <file>" if r["kind"] == "read-default" else "signatures"
+            print(f"  [{r['status']:>12}] {r['target']}  {label}: {r['kept']}/{r['promised']} ({r['coverage_pct']}%)")
         else:
             print(
                 f"  [{r['status']:>12}] {r['target']}  fn {r['fn_kept']}/{r['fn_promised']} "
